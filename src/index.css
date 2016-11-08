@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'Gotham';
+	src: url('http://res.cloudinary.com/myntra-com/raw/upload/v1471606844/fonts/gotham/Gotham-Light.otf') format('opentype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gotham', sans-serif;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
