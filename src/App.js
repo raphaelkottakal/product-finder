@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {TweenLite} from 'gsap';
-import { find, forEach } from 'lodash';
+import { find, findIndex, forEach } from 'lodash';
 
 import questions from './data/questions';
 import results from './data/results';
@@ -27,6 +27,9 @@ class App extends Component {
 		nextQuestionState.push(questions.main);
 
 		this.setState({ liveQuestions: nextQuestionState });
+
+		this.canSwipeBack = false;
+		this.canSwipeNext = false;
 
 	}
 
@@ -87,6 +90,7 @@ class App extends Component {
 			optionSelected: true
 		});
 
+
 		if (nextQuestionKey && !this.state.optionSelected) {
 			
 			// console.log(questions[nextQuestionKey]);
@@ -95,21 +99,52 @@ class App extends Component {
 				this.setState({
 					optionSelected: false
 				});
+
+				if (this.state.liveQuestions.length > 0 && this.state.currentQuestion > 0) {
+					this.canSwipeBack = true;
+				}
+
+				if (this.state.currentQuestion < this.state.liveQuestions.length - 1) {
+					this.canSwipeNext = true;
+				}
 			}  });
 
 			let nextQuestionState = this.state.liveQuestions;
 			let nextResultState = this.state.choices;
 
-			nextResultState.push({questionKey, key});
+			var prevAns = findIndex(nextResultState, o => o.questionKey === questionKey);
+			console.log(prevAns);
 
-			nextQuestionState.push(questions[nextQuestionKey]);
+			if (prevAns > -1) {
 
-			this.setState({
-				liveQuestions: nextQuestionState,
-				currentQuestion: this.state.currentQuestion + 1,
-				sliderWidth: this.state.sliderWidth + window.innerWidth,
-				choices: nextResultState
-			});
+				nextResultState.splice(prevAns+1);
+				nextResultState[prevAns] = {questionKey, key};
+
+				nextQuestionState.splice(prevAns+1);
+				nextQuestionState.push(questions[nextQuestionKey]);
+
+				this.setState({
+					liveQuestions: nextQuestionState,
+					currentQuestion: this.state.currentQuestion + 1,
+					sliderWidth: this.state.sliderWidth + window.innerWidth,
+					choices: nextResultState
+				});
+				this.canSwipeNext = false;
+
+
+			} else {
+
+				nextResultState.push({questionKey, key});
+
+				nextQuestionState.push(questions[nextQuestionKey]);
+
+				this.setState({
+					liveQuestions: nextQuestionState,
+					currentQuestion: this.state.currentQuestion + 1,
+					sliderWidth: this.state.sliderWidth + window.innerWidth,
+					choices: nextResultState
+				});
+			}
 
 			// console.log(this.state.choices);
 			forEach(this.state.choices, (val,i) => {
@@ -180,6 +215,59 @@ class App extends Component {
 		return allQuestion;
 	}
 
+	handelTouchStart(e) {
+		var { clientX } = e.nativeEvent.touches[0];
+		// console.log(clientX, clientY);
+		this.startTouchX = clientX;
+	}
+
+	handelTouchMove(e) {
+		const { clientX } = e.nativeEvent.touches[0];
+		const diff = Math.floor((this.startTouchX - clientX));
+		if (Math.abs(diff,-1) > window.innerWidth /2) {
+			if (diff < 0 && this.canSwipeBack) {
+				this.canSwipeBack = false;
+				TweenLite.to(this.refs.slider, 0.5, { x: "+="+window.innerWidth, onComplete: () => {
+					if (this.state.currentQuestion-1 === 0) {
+						this.canSwipeBack = false;
+					} else {
+						this.canSwipeBack = true;
+					}
+
+					if (this.state.currentQuestion-1 === this.state.liveQuestions.length - 1) {
+
+						this.canSwipeNext = false;
+					} else {
+
+						this.canSwipeNext = true;
+					}
+
+					this.setState({currentQuestion: this.state.currentQuestion-1});
+				} });
+			} else if (diff > 0 && this.canSwipeNext) {
+
+				this.canSwipeNext = false;
+				TweenLite.to(this.refs.slider, 0.5, { x: "-="+window.innerWidth, onComplete: () => {
+					console.log(this.state.currentQuestion+1,this.state.liveQuestions.length - 1);
+					if (this.state.currentQuestion+1 === 0) {
+						this.canSwipeBack = false;
+					} else {
+						this.canSwipeBack = true;
+					}
+
+					if (this.state.currentQuestion+1 === this.state.liveQuestions.length - 1) {
+
+						this.canSwipeNext = false;
+					} else {
+
+						this.canSwipeNext = true;
+					}
+					this.setState({currentQuestion: this.state.currentQuestion+1});
+				} });
+			}
+		}
+	}
+
   render() {
 
   	const css = {
@@ -195,7 +283,7 @@ class App extends Component {
   		},
   		shopLink: {
   			position: 'fixed',
-  			width: '100%',
+  			width: '90%',
   			bottom: 0,
   			left: 0,
   			display: 'block',
@@ -207,7 +295,7 @@ class App extends Component {
 
 	return (
 		<div style={css.app} className="App">
-			<div style={css.slider} ref="slider">
+			<div onTouchStart={this.handelTouchStart.bind(this)} onTouchMove={this.handelTouchMove.bind(this)} style={css.slider} ref="slider">
 				{this.renderQuestions()}
 			</div>
 				{(this.state.link) ? <a style={css.shopLink} target="_blank" href={this.state.link}>{this.state.link}</a> : ''}

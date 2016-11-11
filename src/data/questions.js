@@ -301,7 +301,7 @@ export default {
 			},
 			{
 				key: 'Hiking/Trekking',
-				image: 'https://placehold.it/300x150&text=Hiking/Trekking',
+				image: 'https://placehold.it/300x150&text=Hiking or Trekking',
 			},
 			{
 				key: 'Skip',
