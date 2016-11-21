@@ -6,10 +6,15 @@
     "react-scripts": "0.7.0"
   },
   "dependencies": {
+    "ajax-request": "^1.2.1",
+    "axios": "^0.15.2",
     "gsap": "^1.19.0",
+    "jquery": "^3.1.1",
+    "jsonp": "^0.2.0",
     "lodash": "^4.16.6",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "superagent": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

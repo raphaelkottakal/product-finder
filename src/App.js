@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
+import jsonp from 'jsonp';
+import { ajax } from 'jquery';
+import superagent from 'superagent';
+// import getJson from 'get-json';
 import {TweenLite} from 'gsap';
 import { find, findIndex, forEach } from 'lodash';
+
 
 import questions from './data/questions';
 import results from './data/results';
@@ -16,11 +22,14 @@ class App extends Component {
 			currentQuestion: 0,
 			liveQuestions: [],
 			choices: [],
-			link: null
+			link: null,
+			status: 'loading'
 		}
 	}
 
 	componentDidMount() {
+
+		this.json = {};
 
 		let nextQuestionState = this.state.liveQuestions;
 
@@ -30,6 +39,71 @@ class App extends Component {
 
 		this.canSwipeBack = false;
 		this.canSwipeNext = false;
+
+		// getJson('http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking', (err,res)=>{
+		// 	console.log('err',err);
+		// 	console.log('res',res);
+		// });
+
+		// window.jsonFunc = (json) => {
+		// 	console.log(json);
+		// }
+		
+
+		// getJSON('http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking', (data)=>{
+		// 	console.log(data);
+		// });
+
+
+		// const script = document.createElement('script');
+		// script.src = 'http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking?q=jsonFunc'
+		// document.getElementsByTagName('head')[0].appendChild(script);
+
+		// jsonp('http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking', {name: 'jsonFunc'} , function(err, data) {
+		// 	console.log('err',err);
+		// 	console.log('data',data);
+		// })
+		// .then((res)=>{
+		// 	console.log(res);
+		// });
+
+		// ajax(
+		// 	{
+		// 		url: 'http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking',
+				
+		// 	}
+		// );
+
+		// superagent
+		// 	.get('http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking')
+		// 	.end(function(err,res){
+		// 		console.log('the err is',err,res)
+		// 	});
+
+		axios.get('http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking', {
+			// headers: {
+			// 	'Accept': {'application/json','application/xml'}
+			// 	// 'Access-Control-Request-Headers':'access-control-allow-origin'
+
+			// }
+		})
+			.then((res)=>{
+				this.setState({
+					status: 'working'
+				});
+				console.log(res);
+				console.log('Product count',res.data.data.totalProductsCount);
+				console.log('Products',res.data.data.results.products);
+			})
+			.catch((err)=>{
+				this.setState({
+					status: 'no-working'
+				});
+				console.log(err);
+			});
+
+
+
 
 	}
 
@@ -295,6 +369,7 @@ class App extends Component {
 
 	return (
 		<div style={css.app} className="App">
+			<div>{this.state.status}</div>
 			<div onTouchStart={this.handelTouchStart.bind(this)} onTouchMove={this.handelTouchMove.bind(this)} style={css.slider} ref="slider">
 				{this.renderQuestions()}
 			</div>
