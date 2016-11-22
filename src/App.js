@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import axios from 'axios';
 import jsonp from 'jsonp';
 import { ajax } from 'jquery';
@@ -37,6 +36,7 @@ class App extends Component {
 
 		this.setState({ liveQuestions: nextQuestionState });
 
+		this.canSwipeShopUp = true;
 		this.canSwipeBack = false;
 		this.canSwipeNext = false;
 
@@ -342,6 +342,27 @@ class App extends Component {
 		}
 	}
 
+	handelTouchStartShop(e) {
+		const { clientY } = e.nativeEvent.touches[0];
+		this.startTouchYShop = clientY;
+	}
+
+	handelTouchMoveShop(e) {
+		e.preventDefault();
+		const { clientY } = e.nativeEvent.touches[0];
+		const diff = Math.floor((this.startTouchYShop - clientY));
+
+		if (Math.abs(diff) > window.innerHeight/3) {
+			if (diff > 0 && this.canSwipeShopUp) {
+				TweenLite.to(this.refs.shop, 1, { height: '+=200'});
+				this.canSwipeShopUp = false;
+			} else if (diff < 0 && !this.canSwipeShopUp) {
+				TweenLite.to(this.refs.shop, 1, { height: '-=200'});
+				this.canSwipeShopUp = true;
+			}
+		}
+	}
+
   render() {
 
   	const css = {
@@ -357,13 +378,13 @@ class App extends Component {
   		},
   		shopLink: {
   			position: 'fixed',
-  			width: '90%',
+  			width: '100%',
   			bottom: 0,
   			left: 0,
   			display: 'block',
   			textAlign: 'center',
   			backgroundColor: 'tomato',
-  			padding: 16
+  			padding: '16px 0'
   		}
   	}
 
@@ -373,7 +394,7 @@ class App extends Component {
 			<div onTouchStart={this.handelTouchStart.bind(this)} onTouchMove={this.handelTouchMove.bind(this)} style={css.slider} ref="slider">
 				{this.renderQuestions()}
 			</div>
-				{(this.state.link) ? <a style={css.shopLink} target="_blank" href={this.state.link}>{this.state.link}</a> : ''}
+				{(this.state.link) ? <a ref="shop" style={css.shopLink} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)} target="_blank" href={this.state.link}>{this.state.link}</a> : ''}
 		</div>
 	);
   }
