@@ -254,33 +254,64 @@ class App extends Component {
 
 	renderQuestions() {
 		const windowWidth = window.innerWidth;
+			
 		
 		const allQuestion = this.state.liveQuestions.map((val,i) => {
-
-			const { image, options, key } = val;
+			// console.log(val.options.length);
+			const { text, options, key } = val;
 			const css = {
 				question: {
 					width: windowWidth,
 					display: 'inline-block',
 					verticalAlign: 'top'
+				},
+				options:{
+					display: 'flex',
+					flexWrap: 'wrap',
+					justifyContent: 'flex-start'
+				},
+				optionItems:{
+					padding: 5,
+					textAlign:'center'
+				},
+				mainHead:{
+					textAlign: 'center'
 				}
+			}
+			if(val.options.length <=4){
+				css.optionItems.width ='47%'
+
+			}else{
+				css.optionItems.width ='30%'
 			}
 
 			const questionKey = key;
 
 			const renderOptions = options.map((val,i) => {
-				const { key, image, nextQuestionKey } = val;
+				const { key, image, optionText, nextQuestionKey } = val;
 				return (
-					<div key={i} className="options">
-						<img src={image} alt={key} onClick={this.handelOptionClick.bind(this,{key,questionKey,nextQuestionKey})} />
+					<div key={i} style={css.optionItems} className="options">
+						<div>
+							<img src={image} alt={key} onClick={this.handelOptionClick.bind(this,{key,questionKey,nextQuestionKey})} />
+							<p>{optionText}</p>
+						</div>
 					</div>
 				);
 			});
 
 			return (
 				<div key={i} style={css.question} className="question">
-					<img src={image} alt={key} />
-					{renderOptions}
+					{/*<img src={image} alt={key} />
+						Heading in all the pages
+					*/}
+
+					<p style={css.mainHead}>Sports Shoe Finder</p>
+					<img src="https://placehold.it/980x10&amp;text=-" alt="Men" />
+
+					<p>{text}</p>
+					<div style={css.options}>
+						{renderOptions}
+					</div>
 				</div>
 			);
 
@@ -369,7 +400,9 @@ class App extends Component {
   		app: {
   			width: window.innerWidth,
   			height: 'auto',
-  			overflow: 'hidden'
+  			overflow: 'hidden',
+  			backgroundColor:'#161616',
+  			color:'white'
   		},
   		slider: {
   			width: this.state.sliderWidth,
@@ -381,10 +414,13 @@ class App extends Component {
   			width: '100%',
   			bottom: 0,
   			left: 0,
-  			display: 'block',
+  			display: 'none',
   			textAlign: 'center',
   			backgroundColor: 'tomato',
   			padding: '16px 0'
+  		},
+  		mainHead:{
+  			textAlign: 'center'
   		}
   	}
 
@@ -392,6 +428,8 @@ class App extends Component {
 		<div style={css.app} className="App">
 			<div>{this.state.status}</div>
 			<div onTouchStart={this.handelTouchStart.bind(this)} onTouchMove={this.handelTouchMove.bind(this)} style={css.slider} ref="slider">
+				
+				
 				{this.renderQuestions()}
 			</div>
 				{(this.state.link) ? <a ref="shop" style={css.shopLink} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)} target="_blank" href={this.state.link}>{this.state.link}</a> : ''}
