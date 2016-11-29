@@ -5,7 +5,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Road/Treadmill",
     "ANSWER Q4": "High arch/Underpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder"
   },
   {
     "COMBINATION NO.": "C2",
@@ -13,7 +13,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Road/Treadmill",
     "ANSWER Q4": "Normal arch/Neutral pronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C3",
@@ -21,7 +21,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Road/Treadmill",
     "ANSWER Q4": "Low arch/Overpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C4",
@@ -37,7 +37,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Trail",
     "ANSWER Q4": "High arch/Underpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C6",
@@ -45,7 +45,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Trail",
     "ANSWER Q4": "Normal arch/Neutral pronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C7",
@@ -53,7 +53,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Trail",
     "ANSWER Q4": "Low arch/Overpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C8",
@@ -69,7 +69,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Track",
     "ANSWER Q4": "High arch/Underpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C10",
@@ -77,7 +77,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Track",
     "ANSWER Q4": "Normal arch/Neutral pronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C11",
@@ -85,7 +85,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Track",
     "ANSWER Q4": "Low arch/Overpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C12",
@@ -101,7 +101,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "High arch/Underpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C14",
@@ -109,7 +109,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "Normal arch/Neutral pronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C15",
@@ -117,7 +117,7 @@ export default [
     "ANSWER Q2": "Running",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "Low arch/Overpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C16",
@@ -133,7 +133,7 @@ export default [
     "ANSWER Q2": "Training",
     "ANSWER Q3": "Weight Training",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C18",
@@ -149,7 +149,7 @@ export default [
     "ANSWER Q2": "Training",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C20",
@@ -189,7 +189,7 @@ export default [
     "ANSWER Q2": "Basketball",
     "ANSWER Q3": "Point Guard",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C25",
@@ -197,7 +197,7 @@ export default [
     "ANSWER Q2": "Basketball",
     "ANSWER Q3": "Shooting Guard",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C26",
@@ -205,7 +205,7 @@ export default [
     "ANSWER Q2": "Basketball",
     "ANSWER Q3": "Center",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C27",
@@ -213,7 +213,7 @@ export default [
     "ANSWER Q2": "Basketball",
     "ANSWER Q3": "Power Forward",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C28",
@@ -221,7 +221,7 @@ export default [
     "ANSWER Q2": "Basketball",
     "ANSWER Q3": "Small Forward",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C29",
@@ -237,7 +237,7 @@ export default [
     "ANSWER Q2": "Tennis",
     "ANSWER Q3": "Grass court",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C31",
@@ -245,7 +245,7 @@ export default [
     "ANSWER Q2": "Tennis",
     "ANSWER Q3": "Clay court",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C32",
@@ -269,7 +269,7 @@ export default [
     "ANSWER Q2": "Cricket",
     "ANSWER Q3": "Bowlers",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C35",
@@ -277,7 +277,7 @@ export default [
     "ANSWER Q2": "Cricket",
     "ANSWER Q3": "Batsmen",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C36",
@@ -285,7 +285,7 @@ export default [
     "ANSWER Q2": "Cricket",
     "ANSWER Q3": "All Rounders",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C37",
@@ -293,7 +293,7 @@ export default [
     "ANSWER Q2": "Cricket",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C38",
@@ -301,7 +301,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Trail Running",
     "ANSWER Q4": "High arch/Underpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C39",
@@ -309,7 +309,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Trail Running",
     "ANSWER Q4": "Normal arch/Neutral pronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C40",
@@ -317,7 +317,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Trail Running",
     "ANSWER Q4": "Low arch/Overpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C41",
@@ -325,7 +325,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Trail Running",
     "ANSWER Q4": "Skip",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C42",
@@ -333,7 +333,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Hiking/Trekking",
     "ANSWER Q4": "Mid Tops",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C43",
@@ -341,7 +341,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Hiking/Trekking",
     "ANSWER Q4": "High Tops",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C44",
@@ -349,7 +349,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Hiking/Trekking",
     "ANSWER Q4": "Skip",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C45",
@@ -357,7 +357,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C46",
@@ -365,7 +365,7 @@ export default [
     "ANSWER Q2": "Indoor Sports",
     "ANSWER Q3": "(Result)",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C47",
@@ -373,7 +373,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Road/Treadmill",
     "ANSWER Q4": "High arch/Underpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C48",
@@ -381,7 +381,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Road/Treadmill",
     "ANSWER Q4": "Normal arch/Neutral pronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C49",
@@ -389,7 +389,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Road/Treadmill",
     "ANSWER Q4": "Low arch/Overpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C50",
@@ -397,7 +397,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Road/Treadmill",
     "ANSWER Q4": "Skip",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C51",
@@ -405,7 +405,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Trail",
     "ANSWER Q4": "High arch/Underpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C52",
@@ -413,7 +413,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Trail",
     "ANSWER Q4": "Normal arch/Neutral pronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C53",
@@ -421,7 +421,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Trail",
     "ANSWER Q4": "Low arch/Overpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C54",
@@ -429,7 +429,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Trail",
     "ANSWER Q4": "Skip",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C55",
@@ -437,7 +437,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Track",
     "ANSWER Q4": "High arch/Underpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C56",
@@ -445,7 +445,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Track",
     "ANSWER Q4": "Normal arch/Neutral pronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C57",
@@ -453,7 +453,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Track",
     "ANSWER Q4": "Low arch/Overpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C58",
@@ -461,7 +461,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Track",
     "ANSWER Q4": "Skip",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C59",
@@ -469,7 +469,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "High arch/Underpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C60",
@@ -477,7 +477,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "Normal arch/Neutral pronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C61",
@@ -485,7 +485,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "Low arch/Overpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C62",
@@ -493,7 +493,7 @@ export default [
     "ANSWER Q2": "Running / Walking",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "Skip",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C63",
@@ -501,7 +501,7 @@ export default [
     "ANSWER Q2": "Training/Gym/ Aerobics/Dance",
     "ANSWER Q3": "Training / Gym",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C64",
@@ -509,7 +509,7 @@ export default [
     "ANSWER Q2": "Training/Gym/ Aerobics/Dance",
     "ANSWER Q3": "Aerobics/Dance/Zumba/ Group Cardio classes",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C65",
@@ -517,7 +517,7 @@ export default [
     "ANSWER Q2": "Training/Gym/ Aerobics/Dance",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C66",
@@ -525,7 +525,7 @@ export default [
     "ANSWER Q2": "Team Sports",
     "ANSWER Q3": "(Result)",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C67",
@@ -533,7 +533,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Trail Running",
     "ANSWER Q4": "High arch/Underpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C68",
@@ -541,7 +541,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Trail Running",
     "ANSWER Q4": "Normal arch/Neutral pronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C69",
@@ -549,7 +549,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Trail Running",
     "ANSWER Q4": "Low arch/Overpronation",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C70",
@@ -557,7 +557,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Trail Running",
     "ANSWER Q4": "Skip",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C71",
@@ -565,7 +565,7 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Hiking/Trekking",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   },
   {
     "COMBINATION NO.": "C72",
@@ -573,6 +573,6 @@ export default [
     "ANSWER Q2": "Trekking/Outdoor",
     "ANSWER Q3": "Skip",
     "ANSWER Q4": "(Result)",
-    "CURATION - VIEW ALL": ""
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women"
   }
 ]

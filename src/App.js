@@ -80,31 +80,52 @@ class App extends Component {
 		// 		console.log('the err is',err,res)
 		// 	});
 
-		axios.get('http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking', {
-			// headers: {
-			// 	'Accept': {'application/json','application/xml'}
-			// 	// 'Access-Control-Request-Headers':'access-control-allow-origin'
+		// axios.get('http://www.myntra.com/radium/devapi/getData.php?q=sports-shoe-finder&f=Sport_article_attr%3Arunning%3A%3Agender%3Amen%2520women%2Cwomen', {
+		// 	// headers: {
+		// 	// 	'Accept': {'application/json','application/xml'}
+		// 	// 	// 'Access-Control-Request-Headers':'access-control-allow-origin'
 
-			// }
-		})
-			.then((res)=>{
-				this.setState({
-					status: 'working'
-				});
-				console.log(res);
-				console.log('Product count',res.data.data.totalProductsCount);
-				console.log('Products',res.data.data.results.products);
-			})
-			.catch((err)=>{
-				this.setState({
-					status: 'no-working'
-				});
-				console.log(err);
+		// 	// }
+		// })
+		// .then((res)=>{
+		// 	this.setState({
+		// 		status: 'working'
+		// 	});
+		// 	console.log(res);
+		// 	console.log('Product count',res.data.data.results.totalProductsCount);
+		// 	console.log('Products',res.data.data.results.products);
+		// })
+		// .catch((err)=>{
+		// 	this.setState({
+		// 		status: 'no-working'
+		// 	});
+		// 	console.log(err);
+		// });
+
+		this.getJson({
+			query: 'sports-shoe-finder',
+			filter: 'Sport_article_attr%3Arunning%3A%3Agender%3Amen%2520women%2Cwomen'
+		});
+
+
+	}
+
+	getJson({query,filter}) {
+		axios.get(`http://www.myntra.com/radium/devapi/getData.php?q=${query}&f=${filter}`)
+		.then((res)=>{
+			this.setState({
+				status: 'working'
 			});
-
-
-
-
+			console.log(res);
+			console.log('Product count',res.data.data.results.totalProductsCount);
+			console.log('Products',res.data.data.results.products);
+		})
+		.catch((err)=>{
+			this.setState({
+				status: 'no-working'
+			});
+			console.log(err);
+		});
 	}
 
 	findResult(answers) {
@@ -151,7 +172,22 @@ class App extends Component {
 			});
 		}
 
-		this.setState({link: resultObject['COMBINATION NO.']});
+		const link = resultObject['CURATION - VIEW ALL'];
+		const filterIndex = link.indexOf('?');
+		this.setState({link});
+
+		const options = {};
+		if (filterIndex != -1) {
+			options.filter = link.substring(filterIndex + 3);
+			options.query = link.substring(22,filterIndex);
+		} else {
+			options.query = link.substring(22);
+			options.filter = '';
+		}
+
+		console.log(link);
+		console.log(options);
+		this.getJson(options);
 	}
 
 	handelOptionClick(data) {
@@ -394,7 +430,7 @@ class App extends Component {
 			<div onTouchStart={this.handelTouchStart.bind(this)} onTouchMove={this.handelTouchMove.bind(this)} style={css.slider} ref="slider">
 				{this.renderQuestions()}
 			</div>
-				{(this.state.link) ? <a ref="shop" style={css.shopLink} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)} target="_blank" href={this.state.link}>{this.state.link}</a> : ''}
+				{(this.state.link) ? <a ref="shop" style={css.shopLink} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)} target="_blank" href={this.state.link}>Shop link</a> : ''}
 		</div>
 	);
   }
