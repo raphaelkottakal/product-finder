@@ -88,7 +88,7 @@ export default {
 			{
 				key: 'Skip',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/1.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
 				nextQuestionKey: 'pronation'
 			},
 		]
@@ -112,7 +112,7 @@ export default {
 			},
 			{
 				key: 'Skip',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/1.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
 			},
 		]
@@ -142,7 +142,7 @@ export default {
 			},
 			{
 				key: 'Skip',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/1.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
 			},
 		]
@@ -154,8 +154,8 @@ export default {
 		options: [
 			{
 				key: 'Point Guard',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/11.1.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/11.2.png',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/9.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/9.1.png',
 				optionText: 'Point Guard',
 			},
 			{
@@ -166,8 +166,8 @@ export default {
 			},
 			{
 				key: 'Center',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/9.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/9.1.png',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/11.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/11.2.png',
 				optionText: 'Center',
 			},
 			{
@@ -184,7 +184,7 @@ export default {
 			},
 			{
 				key: 'Skip',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/1.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
 			},
 		]
@@ -210,11 +210,11 @@ export default {
 				key: 'Indoor/Hard Court',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480333373/SIS/shoe-finder/28.2.png',
 				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480333373/SIS/shoe-finder/28.1.png',
-				optionText: 'Hard Court',
+				optionText: 'Indoor',
 			},
 			{
 				key: 'Skip',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/1.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
 			},
 		]
@@ -244,7 +244,7 @@ export default {
 			},
 			{
 				key: 'Skip',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/1.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
 			},
 		]
@@ -270,7 +270,7 @@ export default {
 			},
 			{
 				key: 'Skip',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/1.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
 			},
 		]
@@ -300,7 +300,7 @@ export default {
 			},
 			{
 				key: 'Skip',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/1.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
 			},
 		]
@@ -324,7 +324,7 @@ export default {
 			},
 			{
 				key: 'Skip',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/1.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
 			},
 		]

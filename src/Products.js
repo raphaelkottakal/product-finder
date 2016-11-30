@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {TweenLite} from 'gsap';
+import ReactGA from 'react-ga';
 
 
 export default class App extends Component {
@@ -32,20 +33,21 @@ export default class App extends Component {
 			const imageSrc = 'http://assets.myntassets.com/h_240,q_80,w_180/v1/' + val['search_image'].slice(28);
 			return (
 				<div style={css.product} key={i} className="product">
-					<a style={css.link} href={val['dre_landing_page_url']}>
+					<a onClick={this.handelClick.bind(this)} target="_blank" style={css.link} href={val['dre_landing_page_url']}>
 						<img src={imageSrc} alt={val['stylename']} />
 						<div style={css.details} className="details">
 							<div className="brand">{val['stylename']}</div>
 							<div className="price-container">
 								{/*<span className="mrp">{val['price']}</span>*/}
-								<span className="discounted"><strong>Rs.{val['discounted_price']}, </strong></span>
-								{<span className="discount">{val['dre_discount_label']}</span>}
+								<span className="discounted"><strong>Rs.{val['discounted_price']}</strong></span>
+								{(val['dre_discount_label'])?<span className="discount">, {val['dre_discount_label']}</span>:''}
 							</div>
 						</div>
 					</a>
 				</div>
 			);
 		});
+
 
 		return products;
 	}
@@ -72,6 +74,15 @@ export default class App extends Component {
 				this.canSwipeShopUp = true;
 			}
 		}
+	}
+
+	handelClick(e) {
+		const href = e.target.closest('a').href;
+		ReactGA.event({
+		  category: 'Radium',
+		  action: 'PDP',
+		  label : href
+		});
 	}
 
 	render() {
@@ -110,6 +121,17 @@ export default class App extends Component {
 				fontSize: 14,
 				padding: '8px 0',
 				fontWeight: 'bold'
+			},
+			shopAll: {
+				display: 'block',
+				backgroundColor: '#666',
+				padding: 8,
+				fontSize: 13,
+				textAlign: 'center',
+				textDecoration: 'none',
+				textTransform: 'uppercase',
+				color: '#fff',
+				fontWeight: 'bold'
 			}
 		}
 
@@ -119,6 +141,7 @@ export default class App extends Component {
 				<div ref="products" style={wrapperCss}>
 					{(this.props.ajaxDone) ? this.renderProducts() : <div style={css.loading}>Fetching styles &hellip;</div>}
 				</div>
+				{(this.props.ajaxDone) ? <a target="_blank" style={css.shopAll} key="last" href={this.props.shopLink}>View all</a> : ''}
 			</div>
 		);
 	}

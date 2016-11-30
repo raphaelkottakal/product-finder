@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ReactGA from 'react-ga';
+import { scroller, Element } from 'react-scroll';
 import {TweenLite} from 'gsap';
 import { find, findIndex, forEach } from 'lodash';
 
@@ -18,7 +20,6 @@ class App extends Component {
 			currentQuestion: 0,
 			liveQuestions: [],
 			choices: [],
-			link: null,
 			status: 'loading',
 			callDone: false,
 			products: [],
@@ -28,11 +29,16 @@ class App extends Component {
 			resourcesLoaded: false,
 			imagesToLoad: 0,
 			imagesLoaded: 0,
+			shopLink: 'http://www.myntra.com/sports-shoe-finder?f=gender%3Amen%2Cmen%2520women'
 
 		}
 	}
 
 	componentDidMount() {
+
+		ReactGA.initialize('UA-1752831-18');
+		ReactGA.set({ page: window.location.pathname });
+		ReactGA.pageview(window.location.pathname);
 
 		let nextQuestionState = this.state.liveQuestions;
 
@@ -93,6 +99,11 @@ class App extends Component {
 				products: res.data.data.results.products,
 				callDone: true
 			});
+			ReactGA.event({
+			  category: 'Radium',
+			  action: 'devApiCall',
+			  label : `Query:${query}, filter:${filter}`
+			});
 			// console.log(res);
 			// console.log('Product count',res.data.data.results.totalProductsCount);
 			// console.log('Products',res.data.data.results.products);
@@ -138,7 +149,7 @@ class App extends Component {
 		}
 		// console.log('result',resultObject);
 		this.getJson({ query: resultObject['LINK'], filter: resultObject['FILTER'] });
-		this.setState({link: resultObject['COMBINATION NO.']});
+		this.setState({shopLink: resultObject['CURATION - VIEW ALL']});
 	}
 
 	handelOptionClick(data) {
@@ -276,6 +287,13 @@ class App extends Component {
 			});
 			this.findResult(answers);
 			// console.log('answers',answers);
+
+			scroller.scrollTo('shop',{
+				duration: 1000,
+				delay: 100,
+				offset: -50,
+				smooth: true,
+			});
 		}
 
 	}
@@ -306,7 +324,7 @@ class App extends Component {
 				},
 				question: {
 					margin: 0,
-					padding: '16px 0',
+					padding: '8px 0',
 					paddingBottom: 8
 				},
 				options:{
@@ -320,9 +338,10 @@ class App extends Component {
 				},
 				mainHead:{
 					margin: 0,
-					fontSize: 18,
+					fontSize: 16,
 					textAlign: 'center',
-					padding: '8px 0'
+					padding: '8px 0',
+					textTransform: 'uppercase'
 				},
 				optionText: {
 					margin: '4px 0'
@@ -396,7 +415,7 @@ class App extends Component {
 				<div key={i} style={css.wrapper}>
 					<div style={{backgroundColor: '#232323'}}>
 						<p style={css.mainHead}>Sports Shoe Finder</p>
-						<img src="https://placehold.it/980x10&amp;text=-" alt="Men" />
+						<img src="https://placehold.it/980x5&amp;text=-" alt="Men" />
 					</div>
 					<div key={i} style={css.questionWrapper} className="question">
 						{/*<img src={image} alt={key} />
@@ -539,6 +558,10 @@ class App extends Component {
 		return dots;
 	}
 
+	getLoadedPercent() {
+		return Math.floor(this.state.imagesLoaded/this.state.imagesToLoad*100)
+	}
+
   render() {
 
   	const css = {
@@ -592,11 +615,11 @@ class App extends Component {
 			<div style={{textAlign: 'center'}}>
 			{this.renderSlideDots()}
 			</div>
-			<div ref="shop" style={{position: 'relative'}} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)}>
-				<Products title="Men sports shoes" count={this.state.productsCount} ajaxDone={this.state.callDone} array={this.state.products} />
-			</div>
+			<Element name="shop">
+				<Products shopLink={this.state.shopLink} title="Men sports shoes" count={this.state.productsCount} ajaxDone={this.state.callDone} array={this.state.products} />
+			</Element>
 				{/*(this.state.link) ? <a ref="shop" style={css.shopLink} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)} target="_blank" href={this.state.link}>{this.state.link}</a> : ''*/}
-			<div ref="loading" style={css.loading}>Loading resources&hellip;</div>
+			<div ref="loading" style={css.loading}>{this.getLoadedPercent()}% Loaded</div>
 		</div>
 	);
   }

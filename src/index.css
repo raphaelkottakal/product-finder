@@ -1,6 +1,17 @@
 @font-face {
-	font-family: 'Gotham';
-	src: url('http://res.cloudinary.com/myntra-com/raw/upload/v1471606844/fonts/gotham/Gotham-Light.otf') format('opentype');
+	font-family: 'Helvetica';
+	src: url('http://res.cloudinary.com/myntra-com/raw/upload/v1471609975/fonts/helvetica/Helvetica-LT33-Thin_Extended.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('http://res.cloudinary.com/myntra-com/raw/upload/v1471606844/fonts/gotham/Gotham-Light.otf') format('opentype');
+}
+
+
+@font-face {
+  font-family: 'Adidas';
+  src: url('http://res.cloudinary.com/myntra-com/raw/upload/v1471609975/fonts/gotham/Adidas_Half_Block_2016.otf') format('opentype');
 }
 
 body {
