@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import jsonp from 'jsonp';
-import { ajax } from 'jquery';
-import superagent from 'superagent';
-// import getJson from 'get-json';
 import {TweenLite} from 'gsap';
 import { find, findIndex, forEach } from 'lodash';
 
+import Products from './Products';
 
 import questions from './data/questions';
 import results from './data/results';
@@ -22,13 +19,20 @@ class App extends Component {
 			liveQuestions: [],
 			choices: [],
 			link: null,
-			status: 'loading'
+			status: 'loading',
+			callDone: false,
+			products: [],
+			productsCount: 0,
+			canSwipeBack: false,
+			canSwipeNext: false,
+			resourcesLoaded: false,
+			imagesToLoad: 0,
+			imagesLoaded: 0,
+
 		}
 	}
 
 	componentDidMount() {
-
-		this.json = {};
 
 		let nextQuestionState = this.state.liveQuestions;
 
@@ -37,86 +41,78 @@ class App extends Component {
 		this.setState({ liveQuestions: nextQuestionState });
 
 		this.canSwipeShopUp = true;
-		this.canSwipeBack = false;
-		this.canSwipeNext = false;
+		this.canScrollShop = false;
+		// this.canSwipeBack = false;
+		// this.canSwipeNext = false;
 
-		// getJson('http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking', (err,res)=>{
-		// 	console.log('err',err);
-		// 	console.log('res',res);
-		// });
+		this.getJson({
+			query: 'sports-shoe-finder',
+			filter: 'gender%3Amen%2Cmen%2520women'
+		});
 
-		// window.jsonFunc = (json) => {
-		// 	console.log(json);
-		// }
-		
+		let newCount = this.state.imagesToLoad;
+		forEach(questions, (val,i) => {
+			forEach(val.options, (val,i) => {
+				// let newCount = this.state.imagesToLoad;
+				let image = new Image();
+				let select = new Image();
 
-		// getJSON('http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking', (data)=>{
-		// 	console.log(data);
-		// });
+				image.src = val.image;
+				image.onload = this.imageOnload.bind(this);
 
-
-		// const script = document.createElement('script');
-		// script.src = 'http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking?q=jsonFunc'
-		// document.getElementsByTagName('head')[0].appendChild(script);
-
-		// jsonp('http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking', {name: 'jsonFunc'} , function(err, data) {
-		// 	console.log('err',err);
-		// 	console.log('data',data);
-		// })
-		// .then((res)=>{
-		// 	console.log(res);
-		// });
-
-		// ajax(
-		// 	{
-		// 		url: 'http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking',
-				
-		// 	}
-		// );
-
-		// superagent
-		// 	.get('http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking')
-		// 	.end(function(err,res){
-		// 		console.log('the err is',err,res)
-		// 	});
-
-		axios.get('http://developer.myntra.com/search/data/sports-shoe-finder-men-trekking', {
-			// headers: {
-			// 	'Accept': {'application/json','application/xml'}
-			// 	// 'Access-Control-Request-Headers':'access-control-allow-origin'
-
-			// }
-		})
-			.then((res)=>{
-				this.setState({
-					status: 'working'
-				});
-				console.log(res);
-				console.log('Product count',res.data.data.totalProductsCount);
-				console.log('Products',res.data.data.results.products);
-			})
-			.catch((err)=>{
-				this.setState({
-					status: 'no-working'
-				});
-				console.log(err);
+				select.src = val.select;
+				select.onload = this.imageOnload.bind(this);
+				newCount += 2;
 			});
-
+		});
+		this.setState({imagesToLoad: newCount});
 
 
 
 	}
 
+	imageOnload() {
+			let newCount = this.state.imagesLoaded;
+			newCount += 1;
+			this.setState({imagesLoaded: newCount});
+			if (this.state.imagesToLoad === this.state.imagesLoaded) {
+					this.setState({resourcesLoaded: true});
+			}
+		// console.log(this.state.imagesToLoad, this.state.imagesLoaded);
+	}
+
+	getJson({query,filter}) {
+
+		this.setState({
+				callDone: false
+			});
+		axios.get(`http://www.myntra.com/radium/devapi/getData.php?q=${query}&f=${filter}`)
+		.then((res)=>{
+			this.setState({
+				productsCount: res.data.data.results.totalProductsCount,
+				products: res.data.data.results.products,
+				callDone: true
+			});
+			// console.log(res);
+			// console.log('Product count',res.data.data.results.totalProductsCount);
+			// console.log('Products',res.data.data.results.products);
+		})
+		.catch((err)=>{
+			console.log(err);
+		});
+	}
+
 	findResult(answers) {
 		let resultObject;
+			// console.log('answer',answers);
 
 		if (answers['ANSWER Q1']) {
-			console.log(1);
+			// console.log(1);
 			resultObject = find(results,(o) => { return o['ANSWER Q1'] === answers['ANSWER Q1'] });
 		}
 
 		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] ) {
-			console.log(2);
+			// console.log(2);
 			
 			resultObject = find(results,(o) => { 
 				return (
@@ -127,7 +123,7 @@ class App extends Component {
 		}
 
 		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] && answers['ANSWER Q3'] ) {
-			console.log(3);
+			// console.log(3);
 			
 			resultObject = find(results,(o) => { 
 				return (
@@ -137,20 +133,11 @@ class App extends Component {
 				);
 			});
 		}
+		if (resultObject) {
 
-		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] && answers['ANSWER Q3'] && answers['ANSWER Q4'] ) {
-			console.log(3);
-			
-			resultObject = find(results,(o) => { 
-				return (
-					o['ANSWER Q1'] === answers['ANSWER Q1'] &&
-					o['ANSWER Q2'] === answers['ANSWER Q2'] &&
-					o['ANSWER Q3'] === answers['ANSWER Q3'] &&
-					o['ANSWER Q4'] === answers['ANSWER Q4']
-				);
-			});
 		}
-
+		// console.log('result',resultObject);
+		this.getJson({ query: resultObject['LINK'], filter: resultObject['FILTER'] });
 		this.setState({link: resultObject['COMBINATION NO.']});
 	}
 
@@ -175,19 +162,26 @@ class App extends Component {
 				});
 
 				if (this.state.liveQuestions.length > 0 && this.state.currentQuestion > 0) {
-					this.canSwipeBack = true;
+					// this.canSwipeBack = true;
+					this.setState({canSwipeBack: true});
 				}
 
 				if (this.state.currentQuestion < this.state.liveQuestions.length - 1) {
-					this.canSwipeNext = true;
+					// this.canSwipeNext = true;
+					// this.setState({canSwipeNext: true});
+
 				}
+				
+				// console.log('is not last', this.state.currentQuestion !== this.state.liveQuestions.length - 1);
+				// console.log('next  question', this.state.currentQuestion);
+				// console.log('last question',this.state.liveQuestions.length - 1);
 			}  });
 
 			let nextQuestionState = this.state.liveQuestions;
 			let nextResultState = this.state.choices;
 
 			var prevAns = findIndex(nextResultState, o => o.questionKey === questionKey);
-			console.log(prevAns);
+			// console.log('prevAns',prevAns);
 
 			if (prevAns > -1) {
 
@@ -201,12 +195,15 @@ class App extends Component {
 					liveQuestions: nextQuestionState,
 					currentQuestion: this.state.currentQuestion + 1,
 					sliderWidth: this.state.sliderWidth + window.innerWidth,
-					choices: nextResultState
+					choices: nextResultState,
+					canSwipeNext: false
 				});
-				this.canSwipeNext = false;
+				// this.canSwipeNext = false;
 
 
 			} else {
+
+				// console.log('find index',findIndex(nextResultState, o => o.questionKey === questionKey));
 
 				nextResultState.push({questionKey, key});
 
@@ -229,17 +226,48 @@ class App extends Component {
 
 			// console.log('answers',answers);
 			this.findResult(answers);
-			
 
 
 
 		} else if(!nextQuestionKey) {
 			let nextResultState = this.state.choices;
+			let nextQuestionState = this.state.liveQuestions;
+			// let canSwipeNext = true;
 
-			nextResultState.push({questionKey, key});
-			console.log('load result');
+			if (this.state.liveQuestions.length-1 - this.state.currentQuestion !== 0) {
+
+				nextQuestionState.splice(this.state.currentQuestion+1,this.state.liveQuestions.length-1 - this.state.currentQuestion);
+				// console.log('current choices',this.state.currentQuestion+1);
+				// console.log('currentQuestion index', this.state.currentQuestion);
+				// console.log('liveQuestions length',this.state.liveQuestions.length);
+				// console.log('diff',this.state.choices.length-1 - this.state.currentQuestion);
+				// console.log(nextResultState);
+				nextResultState.splice(this.state.currentQuestion,this.state.choices.length - this.state.currentQuestion);
+				nextResultState.push({questionKey, key});
+				// console.log(nextResultState);
+			} else {
+				// console.log('else');
+				const answeringQ = find(this.state.choices,o=>o.questionKey===questionKey);
+				if (answeringQ) {
+					nextResultState.splice(this.state.choices.length-1,1);
+					nextResultState.push({questionKey, key});
+				} else {
+
+					nextResultState.push({questionKey, key});
+				}
+			}
+				// console.log('to remove', this.state.liveQuestions.length - this.state.currentQuestion);
+				// console.log('this.state.liveQuestions.length', this.state.liveQuestions.length - 1);
+
+				// console.log('is not last',this.state.liveQuestions.length - this.state.currentQuestion === 0);
+
+			// nextResultState.push({questionKey, key});
+			// console.log('load result');
 			this.setState({
-				optionSelected: false
+				optionSelected: false,
+				liveQuestions: nextQuestionState,
+				canSwipeNext: false
+
 			});
 			forEach(this.state.choices, (val,i) => {
 				// console.log(val,i);
@@ -247,7 +275,7 @@ class App extends Component {
 				answers[questionKey] = key;
 			});
 			this.findResult(answers);
-			console.log('answers',answers);
+			// console.log('answers',answers);
 		}
 
 	}
@@ -259,27 +287,80 @@ class App extends Component {
 		const allQuestion = this.state.liveQuestions.map((val,i) => {
 			// console.log(val.options.length);
 			const { text, options, key } = val;
+
+			const qKey = key;
 			const css = {
-				question: {
+				wrapper: {
 					width: windowWidth,
 					display: 'inline-block',
-					verticalAlign: 'top'
+					padding: '0 16px 8px 16px',
+					verticalAlign: 'top',
+				},
+				questionWrapper: {
+					position: 'relative',
+					padding: '0 42px',
+					backgroundColor: '#232323',
+					// background: 'radial-gradient(ellipse at center, rgba(138,138,138,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%)',
+					borderBottomLeftRadius: 32,
+					borderBottomRightRadius: 32,
+				},
+				question: {
+					margin: 0,
+					padding: '16px 0',
+					paddingBottom: 8
 				},
 				options:{
 					display: 'flex',
 					flexWrap: 'wrap',
-					justifyContent: 'flex-start'
+					justifyContent: 'center'
 				},
 				optionItems:{
 					padding: 5,
 					textAlign:'center'
 				},
 				mainHead:{
-					textAlign: 'center'
+					margin: 0,
+					fontSize: 18,
+					textAlign: 'center',
+					padding: '8px 0'
+				},
+				optionText: {
+					margin: '4px 0'
+				},
+				back: {
+					// display: (this.canSwipeBack) ? 'flex': 'none',
+					display: 'flex',
+					justifyContent: 'center',
+					alignItems: 'center',
+					position: 'absolute',
+					top: '50%',
+					left: -16,
+					width: 16,
+					height: 100,
+					backgroundColor: '#E5FF44',
+					color: 'black',
+					textAlign: 'center',
+					fontSize: 18,
+					marginTop: -50
+				},
+				next: {
+					display: 'flex',
+					justifyContent: 'center',
+					alignItems: 'center',
+					position: 'absolute',
+					top: '50%',
+					right: -16,
+					width: 16,
+					height: 100,
+					backgroundColor: '#E5FF44',
+					color: 'black',
+					textAlign: 'center',
+					fontSize: 18,
+					marginTop: -50
 				}
 			}
 			if(val.options.length <=4){
-				css.optionItems.width ='47%'
+				css.optionItems.width ='46%'
 
 			}else{
 				css.optionItems.width ='30%'
@@ -288,29 +369,59 @@ class App extends Component {
 			const questionKey = key;
 
 			const renderOptions = options.map((val,i) => {
-				const { key, image, optionText, nextQuestionKey } = val;
-				return (
-					<div key={i} style={css.optionItems} className="options">
-						<div>
-							<img src={image} alt={key} onClick={this.handelOptionClick.bind(this,{key,questionKey,nextQuestionKey})} />
-							<p>{optionText}</p>
+				const { key,select, image, optionText, nextQuestionKey } = val;
+				const isSelected = find(this.state.choices, (o)=>o.key===key&&o.questionKey===qKey);
+				if (isSelected) {
+					return (
+						<div key={i} style={css.optionItems} className="options">
+							<div>
+								<img src={select} alt={key} onClick={this.handelOptionClick.bind(this,{key,questionKey,nextQuestionKey})} />
+								<p style={css.optionText}>{optionText}</p>
+							</div>
 						</div>
-					</div>
-				);
+					);
+				} else {
+					return (
+						<div key={i} style={css.optionItems} className="options">
+							<div>
+								<img src={image} alt={key} onClick={this.handelOptionClick.bind(this,{key,questionKey,nextQuestionKey})} />
+								<p style={css.optionText}>{optionText}</p>
+							</div>
+						</div>
+					);
+				}
 			});
 
 			return (
-				<div key={i} style={css.question} className="question">
-					{/*<img src={image} alt={key} />
-						Heading in all the pages
-					*/}
+				<div key={i} style={css.wrapper}>
+					<div style={{backgroundColor: '#232323'}}>
+						<p style={css.mainHead}>Sports Shoe Finder</p>
+						<img src="https://placehold.it/980x10&amp;text=-" alt="Men" />
+					</div>
+					<div key={i} style={css.questionWrapper} className="question">
+						{/*<img src={image} alt={key} />
+							Heading in all the pages
+						*/}
 
-					<p style={css.mainHead}>Sports Shoe Finder</p>
-					<img src="https://placehold.it/980x10&amp;text=-" alt="Men" />
 
-					<p>{text}</p>
-					<div style={css.options}>
-						{renderOptions}
+						<p style={css.question}>{text}</p>
+						<div style={css.options}>
+							{renderOptions}
+						</div>
+						{
+							(this.state.canSwipeBack) ?
+							<div onClick={this.moveBack.bind(this)} style={css.back}>
+								&#x025C2; 
+							</div>:
+							''
+						}
+						{
+							(this.state.canSwipeNext) ?
+							<div onClick={this.moveToNext.bind(this)} style={css.next}>
+								&#x025B8;
+							</div>:
+							''
+						}
 					</div>
 				</div>
 			);
@@ -330,47 +441,64 @@ class App extends Component {
 		const { clientX } = e.nativeEvent.touches[0];
 		const diff = Math.floor((this.startTouchX - clientX));
 		if (Math.abs(diff,-1) > window.innerWidth /2) {
-			if (diff < 0 && this.canSwipeBack) {
-				this.canSwipeBack = false;
-				TweenLite.to(this.refs.slider, 0.5, { x: "+="+window.innerWidth, onComplete: () => {
-					if (this.state.currentQuestion-1 === 0) {
-						this.canSwipeBack = false;
-					} else {
-						this.canSwipeBack = true;
-					}
+			if (diff < 0 && this.state.canSwipeBack) {
+				this.moveBack();
+			} else if (diff > 0 && this.state.canSwipeNext) {
 
-					if (this.state.currentQuestion-1 === this.state.liveQuestions.length - 1) {
-
-						this.canSwipeNext = false;
-					} else {
-
-						this.canSwipeNext = true;
-					}
-
-					this.setState({currentQuestion: this.state.currentQuestion-1});
-				} });
-			} else if (diff > 0 && this.canSwipeNext) {
-
-				this.canSwipeNext = false;
-				TweenLite.to(this.refs.slider, 0.5, { x: "-="+window.innerWidth, onComplete: () => {
-					console.log(this.state.currentQuestion+1,this.state.liveQuestions.length - 1);
-					if (this.state.currentQuestion+1 === 0) {
-						this.canSwipeBack = false;
-					} else {
-						this.canSwipeBack = true;
-					}
-
-					if (this.state.currentQuestion+1 === this.state.liveQuestions.length - 1) {
-
-						this.canSwipeNext = false;
-					} else {
-
-						this.canSwipeNext = true;
-					}
-					this.setState({currentQuestion: this.state.currentQuestion+1});
-				} });
+				this.moveToNext();
 			}
 		}
+	}
+
+	moveToNext() {
+		this.setState({canSwipeNext: false});
+		// this.canSwipeNext = false;
+		TweenLite.to(this.refs.slider, 0.5, { x: "-="+window.innerWidth, onComplete: () => {
+			// console.log(this.state.currentQuestion+1,this.state.liveQuestions.length - 1);
+			if (this.state.currentQuestion+1 === 0) {
+				this.setState({canSwipeBack: false});
+				// this.canSwipeBack = false;
+			} else {
+				this.setState({canSwipeBack: true});
+				// this.canSwipeBack = true;
+			}
+
+			if (this.state.currentQuestion+1 === this.state.liveQuestions.length - 1) {
+				this.setState({canSwipeNext: false});
+				// this.canSwipeNext = false;
+			} else {
+
+				// this.canSwipeNext = true;
+				this.setState({canSwipeNext: true});
+			}
+			this.setState({currentQuestion: this.state.currentQuestion+1});
+		} });
+	}
+
+	moveBack() {
+		this.setState({canSwipeBack: false});
+		// this.canSwipeBack = false;
+		TweenLite.to(this.refs.slider, 0.5, { x: "+="+window.innerWidth, onComplete: () => {
+			if (this.state.currentQuestion-1 === 0) {
+				this.setState({canSwipeBack: false});
+				// this.canSwipeBack = false;
+			} else {
+				this.setState({canSwipeBack: true});
+				// this.canSwipeBack = true;
+			}
+
+			if (this.state.currentQuestion-1 === this.state.liveQuestions.length - 1) {
+				this.setState({canSwipeNext: false});
+
+				// this.canSwipeNext = false;
+			} else {
+
+				this.setState({canSwipeNext: true});
+				// this.canSwipeNext = true;
+			}
+
+			this.setState({currentQuestion: this.state.currentQuestion-1});
+		} });
 	}
 
 	handelTouchStartShop(e) {
@@ -379,19 +507,36 @@ class App extends Component {
 	}
 
 	handelTouchMoveShop(e) {
-		e.preventDefault();
-		const { clientY } = e.nativeEvent.touches[0];
-		const diff = Math.floor((this.startTouchYShop - clientY));
+		// if (!this.canScrollShop) {
+		// 	e.preventDefault();
+			
+		// }
+		// const { clientY } = e.nativeEvent.touches[0];
+		// const diff = Math.floor((this.startTouchYShop - clientY));
 
-		if (Math.abs(diff) > window.innerHeight/3) {
-			if (diff > 0 && this.canSwipeShopUp) {
-				TweenLite.to(this.refs.shop, 1, { height: '+=200'});
-				this.canSwipeShopUp = false;
-			} else if (diff < 0 && !this.canSwipeShopUp) {
-				TweenLite.to(this.refs.shop, 1, { height: '-=200'});
-				this.canSwipeShopUp = true;
+		// if (Math.abs(diff) > window.innerHeight/3) {
+		// 	if (diff > 0 && this.canSwipeShopUp) {
+		// 		TweenLite.to(this.refs.shop, 1, { top: '-=200'});
+		// 		this.canSwipeShopUp = false;
+		// 		this.canScrollShop = true;
+		// 	} else if (diff < 0 && !this.canSwipeShopUp) {
+		// 		TweenLite.to(this.refs.shop, 1, { top: '+=200'});
+		// 		this.canSwipeShopUp = true;
+		// 		this.canScrollShop = true;
+		// 	}
+		// }
+	}
+
+	renderSlideDots() {
+		const dots = this.state.liveQuestions.map((val,i)=>{
+			if (this.state.currentQuestion === i) {
+				return <div key={i} style={{display: 'inline-block', width: 10, height: 10, backgroundColor: '#E5FF44', margin: 4, borderRadius: '50%'}}></div>
+			} else {
+				return <div key={i} style={{display: 'inline-block', width: 10, height: 10, backgroundColor: 'gray', margin: 4, borderRadius: '50%'}}></div>
 			}
-		}
+		});
+
+		return dots;
 	}
 
   render() {
@@ -421,18 +566,37 @@ class App extends Component {
   		},
   		mainHead:{
   			textAlign: 'center'
+  		},
+  		loading: {
+  			position: 'fixed',
+  			top: 0,
+  			left: 0,
+  			width: '100%',
+  			height: '100%',
+  			backgroundColor: 'hsla(0,0%,0%,.75)',
+  			zIndex: 999,
+  			display: (this.state.resourcesLoaded)?'none':'flex',
+  			justifyContent: 'center',
+  			alignItems: 'center',
+  			fontSize: 18
   		}
   	}
 
 	return (
 		<div style={css.app} className="App">
-			<div>{this.state.status}</div>
 			<div onTouchStart={this.handelTouchStart.bind(this)} onTouchMove={this.handelTouchMove.bind(this)} style={css.slider} ref="slider">
 				
 				
 				{this.renderQuestions()}
 			</div>
-				{(this.state.link) ? <a ref="shop" style={css.shopLink} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)} target="_blank" href={this.state.link}>{this.state.link}</a> : ''}
+			<div style={{textAlign: 'center'}}>
+			{this.renderSlideDots()}
+			</div>
+			<div ref="shop" style={{position: 'relative'}} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)}>
+				<Products title="Men sports shoes" count={this.state.productsCount} ajaxDone={this.state.callDone} array={this.state.products} />
+			</div>
+				{/*(this.state.link) ? <a ref="shop" style={css.shopLink} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)} target="_blank" href={this.state.link}>{this.state.link}</a> : ''*/}
+			<div ref="loading" style={css.loading}>Loading resources&hellip;</div>
 		</div>
 	);
   }
