@@ -1,63 +1,37 @@
 export default {
+
 	main: {
 		key: 'ANSWER Q1',
 		text:'Choose your Sport or Activity from the list below. Any activity that you do 2-3 times a week would require specialized sports shoes!',
 		image: 'https://placehold.it/300x100&text=Choose your Sport or Activity',
 		options: [
 			{
-				key: 'Running',
+				key: 'Running / Walking',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/1.png',
 				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/1.1.png',
-				optionText: 'Running',
-				nextQuestionKey: 'oneA'
+				optionText: 'Running or Walking',
+				nextQuestionKey: 'twoA'
 			},
 			{
-				key: 'Training',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/2.1.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/2.png',
+				key: 'Training/Gym/ Aerobics/Dance',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480339895/SIS/shoe-finder/icon-shoefinder-04.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480339895/SIS/shoe-finder/icon-shoefinder-03.png',
 				optionText: 'Training',
-				nextQuestionKey: 'oneB'
+				nextQuestionKey: 'twoB'
 			},
 			{
-				key: 'Football',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/6.1.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/6.png',
-				optionText: 'Football',
-				nextQuestionKey: 'oneC'
-			},
-			{
-				key: 'Basketball',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/3.1.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/3.png',
-				optionText: 'Basketball',
-				nextQuestionKey: 'oneD'
-			},
-			{
-				key: 'Tennis',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/4.1.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/4.png',
-				optionText: 'Tennis',
-				nextQuestionKey: 'oneE'
-			},
-			{
-				key: 'Cricket',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/5.1.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/5.png',
-				optionText: 'Cricket',
-				nextQuestionKey: 'oneF'
+				key: 'Team Sports',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480339895/SIS/shoe-finder/icon-shoefinder-02.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480339895/SIS/shoe-finder/icon-shoefinder-01.png',
+				optionText: 'Team Sports',
+				// nextQuestionKey: 'twoC'
 			},
 			{
 				key: 'Trekking/Outdoor',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/7.1.png',
 				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/7.png',
 				optionText: 'Outdoor',
-				nextQuestionKey: 'oneG'
-			},
-			{
-				key: 'Indoor Sports',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/8.1.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/8.png',
-				optionText: 'Indoor',
+				nextQuestionKey: 'twoD'
 			},
 		]
 	},
@@ -77,13 +51,15 @@ export default {
 				key: 'Trail',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335009/SIS/shoe-finder/27.1.png',
 				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335009/SIS/shoe-finder/27.png',
-				optionText: 'Trail'
+				optionText: 'Trail',
+				nextQuestionKey: 'pronation'
 			},
 			{
 				key: 'Track',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335009/SIS/shoe-finder/17.1.png',
 				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335009/SIS/shoe-finder/17.png',
-				optionText: 'Track'
+				optionText: 'Track',
+				nextQuestionKey: 'pronation'
 			},
 			{
 				key: 'Skip',
@@ -154,8 +130,8 @@ export default {
 		options: [
 			{
 				key: 'Point Guard',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/9.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/9.1.png',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/11.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/11.2.png',
 				optionText: 'Point Guard',
 			},
 			{
@@ -166,8 +142,8 @@ export default {
 			},
 			{
 				key: 'Center',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/11.1.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/11.2.png',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/9.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335479/SIS/shoe-finder/9.1.png',
 				optionText: 'Center',
 			},
 			{
@@ -210,7 +186,7 @@ export default {
 				key: 'Indoor/Hard Court',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480333373/SIS/shoe-finder/28.2.png',
 				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480333373/SIS/shoe-finder/28.1.png',
-				optionText: 'Indoor',
+				optionText: 'Hard Court',
 			},
 			{
 				key: 'Skip',
@@ -267,6 +243,85 @@ export default {
 				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480336051/SIS/shoe-finder/26.1.png',
 				optionText: 'Trekking',
 				nextQuestionKey: 'tops'
+			},
+			{
+				key: 'Skip',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
+			},
+		]
+	},
+	twoA: {
+		key: 'ANSWER Q2',
+		text: 'What surface do you run/walk on?',
+		image: 'https://placehold.it/300x100&text=What surface do you run or walk on?',
+		options: [
+			{
+				key: 'Road/Treadmill',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335009/SIS/shoe-finder/23.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335009/SIS/shoe-finder/23.png',
+				optionText:'Road/Treadmill',
+			},
+			{
+				key: 'Trail',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335009/SIS/shoe-finder/27.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335009/SIS/shoe-finder/27.png',
+				optionText: 'Trail',
+			},
+			{
+				key: 'Track',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335009/SIS/shoe-finder/17.1.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480335009/SIS/shoe-finder/17.png',
+				optionText: 'Track',
+			},
+			{
+				key: 'Skip',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
+				nextQuestionKey: 'pronation'
+			},
+		]
+	},
+	twoB: {
+		key: 'ANSWER Q2',
+		text: 'What is your training activity?',
+		image: 'https://placehold.it/300x100&text=What is your training activity?',
+		options: [
+			{
+				key: 'Training / Gym',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338023/SIS/shoe-finder/20.2.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338023/SIS/shoe-finder/20.1.png',
+				optionText: 'Weight Training',
+			},
+			{
+				key: 'Aerobics/Dance/Zumba/ Group Cardio classes',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338023/SIS/shoe-finder/29.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338023/SIS/shoe-finder/29.1.png',
+				optionText: 'Cardio Fitness',
+			},
+			{
+				key: 'Skip',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480508269/SIS/shoe-finder/skip-selectpng.png',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480338411/SIS/shoe-finder/skip.png',
+			},
+		]
+	},
+	twoD: {
+		key: 'ANSWER Q2',
+		text: 'What is your outdoor activity?',
+		image: 'https://placehold.it/300x100&text=What is your outdoor activity?',
+		options: [
+			{
+				key: 'Trail Running',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480336051/SIS/shoe-finder/21.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480336051/SIS/shoe-finder/21.1.png',
+				optionText: 'Trail Running',
+			},
+			{
+				key: 'Hiking/Trekking',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480336051/SIS/shoe-finder/26.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480336051/SIS/shoe-finder/26.1.png',
+				optionText: 'Trekking',
 			},
 			{
 				key: 'Skip',

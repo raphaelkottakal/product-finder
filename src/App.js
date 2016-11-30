@@ -29,7 +29,7 @@ class App extends Component {
 			resourcesLoaded: false,
 			imagesToLoad: 0,
 			imagesLoaded: 0,
-			shopLink: 'http://www.myntra.com/sports-shoe-finder?f=gender%3Amen%2Cmen%2520women'
+			shopLink: 'http://www.myntra.com/sports-shoe-finder?f=gender%3Amen%2520women%2Cwomen'
 
 		}
 	}
@@ -53,7 +53,7 @@ class App extends Component {
 
 		this.getJson({
 			query: 'sports-shoe-finder',
-			filter: 'gender%3Amen%2Cmen%2520women'
+			filter: 'gender%3Amen%2520women%2Cwomen'
 		});
 
 		let newCount = this.state.imagesToLoad;
@@ -115,15 +115,14 @@ class App extends Component {
 
 	findResult(answers) {
 		let resultObject;
-			// console.log('answer',answers);
 
 		if (answers['ANSWER Q1']) {
-			// console.log(1);
+			console.log(1);
 			resultObject = find(results,(o) => { return o['ANSWER Q1'] === answers['ANSWER Q1'] });
 		}
 
 		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] ) {
-			// console.log(2);
+			console.log(2);
 			
 			resultObject = find(results,(o) => { 
 				return (
@@ -134,7 +133,7 @@ class App extends Component {
 		}
 
 		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] && answers['ANSWER Q3'] ) {
-			// console.log(3);
+			console.log(3);
 			
 			resultObject = find(results,(o) => { 
 				return (
@@ -147,7 +146,8 @@ class App extends Component {
 		if (resultObject) {
 
 		}
-		// console.log('result',resultObject);
+		console.log('ans',answers);
+		console.log('result',resultObject);
 		this.getJson({ query: resultObject['LINK'], filter: resultObject['FILTER'] });
 		this.setState({shopLink: resultObject['CURATION - VIEW ALL']});
 	}
@@ -616,7 +616,7 @@ class App extends Component {
 			{this.renderSlideDots()}
 			</div>
 			<Element name="shop">
-				<Products shopLink={this.state.shopLink} title="Men sports shoes" count={this.state.productsCount} ajaxDone={this.state.callDone} array={this.state.products} />
+				<Products shopLink={this.state.shopLink} title="Women sports shoes" count={this.state.productsCount} ajaxDone={this.state.callDone} array={this.state.products} />
 			</Element>
 				{/*(this.state.link) ? <a ref="shop" style={css.shopLink} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)} target="_blank" href={this.state.link}>{this.state.link}</a> : ''*/}
 			<div ref="loading" style={css.loading}>{this.getLoadedPercent()}% Loaded</div>
