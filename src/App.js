@@ -321,6 +321,7 @@ class App extends Component {
 					// background: 'radial-gradient(ellipse at center, rgba(138,138,138,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%)',
 					borderBottomLeftRadius: 32,
 					borderBottomRightRadius: 32,
+					textAlign:'center'
 				},
 				question: {
 					margin: 0,
@@ -341,7 +342,9 @@ class App extends Component {
 					fontSize: 16,
 					textAlign: 'center',
 					padding: '8px 0',
-					textTransform: 'uppercase'
+					textTransform: 'uppercase',
+					fontFamily: 'Adidas',
+    				letterSpacing: 1.6
 				},
 				optionText: {
 					margin: '4px 0'
