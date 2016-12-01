@@ -104,6 +104,15 @@ class App extends Component {
 			  action: 'devApiCall',
 			  label : `Query:${query}, filter:${filter}`
 			});
+
+			if (this.state.choices.length === this.state.liveQuestions.length) {
+				scroller.scrollTo('shop',{
+					duration: 1000,
+					delay: 100,
+					offset: -50,
+					smooth: true,
+				});
+			}
 			// console.log(res);
 			// console.log('Product count',res.data.data.results.totalProductsCount);
 			// console.log('Products',res.data.data.results.products);
@@ -292,12 +301,12 @@ class App extends Component {
 			this.findResult(answers);
 			// console.log('answers',answers);
 
-			scroller.scrollTo('shop',{
-				duration: 1000,
-				delay: 100,
-				offset: -50,
-				smooth: true,
-			});
+			// scroller.scrollTo('shop',{
+			// 	duration: 1000,
+			// 	delay: 100,
+			// 	offset: -50,
+			// 	smooth: true,
+			// });
 		}
 
 	}
