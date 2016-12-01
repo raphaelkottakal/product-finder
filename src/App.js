@@ -119,7 +119,10 @@ class App extends Component {
 
 		if (answers['ANSWER Q1']) {
 			// console.log(1);
-			resultObject = find(results,(o) => { return o['ANSWER Q1'] === answers['ANSWER Q1'] });
+			resultObject = find(results,(o) => { return o['ANSWER Q1'] === answers['ANSWER Q1'] &&
+														o['ANSWER Q2'] === 'Skip' &&
+														o['ANSWER Q3'] === 'Skip'
+			});
 		}
 
 		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] ) {
@@ -128,7 +131,8 @@ class App extends Component {
 			resultObject = find(results,(o) => { 
 				return (
 					o['ANSWER Q1'] === answers['ANSWER Q1'] &&
-					o['ANSWER Q2'] === answers['ANSWER Q2']
+					o['ANSWER Q2'] === answers['ANSWER Q2'] &&
+					o['ANSWER Q3'] ==='Skip'
 				);
 			});
 		}
