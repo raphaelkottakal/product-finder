@@ -1,6 +1,10 @@
 @font-face {
-	font-family: 'Helvetica';
-	src: url('http://res.cloudinary.com/myntra-com/raw/upload/v1471609975/fonts/helvetica/Helvetica-LT33-Thin_Extended.ttf') format('truetype');
+  font-family: 'Helvetica neue medium';
+  src: url('http://res.cloudinary.com/myntra-com/raw/upload/v1471609975/fonts/helvetica/HelveticaNeue-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Helvetica neue light';
+  src: url('http://res.cloudinary.com/myntra-com/raw/upload/v1471609975/fonts/helvetica/HelveticaNeue-Light.otf') format('truetype');
 }
 
 @font-face {
@@ -11,7 +15,7 @@
 
 @font-face {
   font-family: 'Adidas';
-  src: url('http://res.cloudinary.com/myntra-com/raw/upload/v1471609975/fonts/gotham/Adidas_Half_Block_2016.otf') format('opentype');
+  src: url('http://res.cloudinary.com/myntra-com/raw/upload/v1471611982/fonts/adidas-half-block/Adidas_Half_Block_2016.otf') format('opentype');
 }
 
 body {
@@ -22,9 +26,9 @@ body {
 }
 
 img {
-	width: 100%;
-	height: auto;
-	display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 
