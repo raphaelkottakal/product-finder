@@ -321,17 +321,21 @@ class App extends Component {
 					// background: 'radial-gradient(ellipse at center, rgba(138,138,138,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%)',
 					borderBottomLeftRadius: 32,
 					borderBottomRightRadius: 32,
-					textAlign:'center'
+					textAlign:'center',
+					fontFamily: 'Helvetica neue medium',
+					letterSpacing: 1
 				},
 				question: {
 					margin: 0,
-					padding: '8px 0',
-					paddingBottom: 8
+					padding: 0,
+					paddingBottom: 8,
+					textAlign:'center'
 				},
 				options:{
 					display: 'flex',
 					flexWrap: 'wrap',
-					justifyContent: 'center'
+					justifyContent: 'center',
+					fontFamily: 'Helvetica neue light'
 				},
 				optionItems:{
 					padding: 5,
@@ -341,7 +345,7 @@ class App extends Component {
 					margin: 0,
 					fontSize: 16,
 					textAlign: 'center',
-					padding: '8px 0',
+					padding: '8px 0 0',
 					textTransform: 'uppercase',
 					fontFamily: 'Adidas',
     				letterSpacing: 1.6
@@ -418,7 +422,7 @@ class App extends Component {
 				<div key={i} style={css.wrapper}>
 					<div style={{backgroundColor: '#232323'}}>
 						<p style={css.mainHead}>Sports Shoe Finder</p>
-						<img src="https://placehold.it/980x5&amp;text=-" alt="Men" />
+						<img style={{marginTop:'-6px'}} src="http://res.cloudinary.com/myntra-com/image/upload/v1480571159/SIS/shoe-finder/dashed-line.png" alt="Men" />
 					</div>
 					<div key={i} style={css.questionWrapper} className="question">
 						{/*<img src={image} alt={key} />
@@ -552,9 +556,9 @@ class App extends Component {
 	renderSlideDots() {
 		const dots = this.state.liveQuestions.map((val,i)=>{
 			if (this.state.currentQuestion === i) {
-				return <div key={i} style={{display: 'inline-block', width: 10, height: 10, backgroundColor: '#E5FF44', margin: 4, borderRadius: '50%'}}></div>
+				return <div key={i} style={{display: 'inline-block', width: 8, height: 8, backgroundColor: '#E5FF44', margin: 4, borderRadius: '50%'}}></div>
 			} else {
-				return <div key={i} style={{display: 'inline-block', width: 10, height: 10, backgroundColor: 'gray', margin: 4, borderRadius: '50%'}}></div>
+				return <div key={i} style={{display: 'inline-block', width: 8, height: 8, backgroundColor: 'gray', margin: 4, borderRadius: '50%'}}></div>
 			}
 		});
 

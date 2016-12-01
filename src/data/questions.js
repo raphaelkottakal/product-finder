@@ -1,7 +1,7 @@
 export default {
 	main: {
 		key: 'ANSWER Q1',
-		text:'Choose your Sport or Activity from the list below. Any activity that you do 2-3 times a week would require specialized sports shoes!',
+		text:'Choose your Sport or Activity from the list below.',
 		image: 'https://placehold.it/300x100&text=Choose your Sport or Activity',
 		options: [
 			{
