@@ -117,23 +117,27 @@ class App extends Component {
 		let resultObject;
 
 		if (answers['ANSWER Q1']) {
-			console.log(1);
-			resultObject = find(results,(o) => { return o['ANSWER Q1'] === answers['ANSWER Q1'] });
+			// console.log(1);
+			resultObject = find(results,(o) => { return o['ANSWER Q1'] === answers['ANSWER Q1'] &&
+														o['ANSWER Q2'] === 'Skip' &&
+														o['ANSWER Q3'] === 'Skip'
+			});
 		}
 
 		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] ) {
-			console.log(2);
+			// console.log(2);
 			
 			resultObject = find(results,(o) => { 
 				return (
 					o['ANSWER Q1'] === answers['ANSWER Q1'] &&
-					o['ANSWER Q2'] === answers['ANSWER Q2']
+					o['ANSWER Q2'] === answers['ANSWER Q2'] &&
+					o['ANSWER Q3'] === 'Skip'
 				);
 			});
 		}
 
 		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] && answers['ANSWER Q3'] ) {
-			console.log(3);
+			// console.log(3);
 			
 			resultObject = find(results,(o) => { 
 				return (
@@ -146,8 +150,8 @@ class App extends Component {
 		if (resultObject) {
 
 		}
-		console.log('ans',answers);
-		console.log('result',resultObject);
+		// console.log('ans',answers);
+		// console.log('result',resultObject);
 		this.getJson({ query: resultObject['LINK'], filter: resultObject['FILTER'] });
 		this.setState({shopLink: resultObject['CURATION - VIEW ALL']});
 	}
@@ -348,7 +352,8 @@ class App extends Component {
 					padding: '8px 0 0',
 					textTransform: 'uppercase',
 					fontFamily: 'Adidas',
-    				letterSpacing: 1.6
+    				letterSpacing: 1.6,
+    				transform: 'skewX(-10deg)'
 				},
 				optionText: {
 					margin: '4px 0'
