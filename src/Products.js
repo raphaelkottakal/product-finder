@@ -85,6 +85,15 @@ export default class App extends Component {
 		});
 	}
 
+	handelClickViewAll(e) {
+		const href = e.target.closest('a').href;
+		ReactGA.event({
+		  category: 'Radium',
+		  action: 'View all',
+		  label : href
+		});
+	}
+
 	render() {
 
 		const wrapperCss = {
@@ -141,7 +150,7 @@ export default class App extends Component {
 				<div ref="products" style={wrapperCss}>
 					{(this.props.ajaxDone) ? this.renderProducts() : <div style={css.loading}>Fetching styles &hellip;</div>}
 				</div>
-				{(this.props.ajaxDone) ? <a target="_blank" style={css.shopAll} key="last" href={this.props.shopLink}>View all</a> : ''}
+				{(this.props.ajaxDone) ? <a onClick={this.handelClickViewAll.bind(this)} target="_blank" style={css.shopAll} key="last" href={this.props.shopLink}>View all</a> : ''}
 			</div>
 		);
 	}
