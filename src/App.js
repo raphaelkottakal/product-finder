@@ -576,16 +576,18 @@ class App extends Component {
 
   render() {
 
+  	const windowWidth = window.innerWidth;
+
   	const css = {
   		app: {
-  			width: window.innerWidth,
+  			width: windowWidth,
   			height: 'auto',
   			overflow: 'hidden',
   			backgroundColor:'#161616',
   			color:'white'
   		},
   		slider: {
-  			width: this.state.sliderWidth,
+  			width: windowWidth * this.state.liveQuestions.length,
   			height: 'auto',
   			position: 'relative'
   		},
