@@ -352,7 +352,8 @@ class App extends Component {
 					padding: '8px 0 0',
 					textTransform: 'uppercase',
 					fontFamily: 'Adidas',
-    				letterSpacing: 1.6
+    				letterSpacing: 1.6,
+    				transform: 'skewX(-10deg)'
 				},
 				optionText: {
 					margin: '4px 0'
