@@ -4,9 +4,9 @@ export default [
     "ANSWER Q1": "Running",
     "ANSWER Q2": "Road/Treadmill",
     "ANSWER Q3": "High arch/Underpronation",
-    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-underpronation?f=Running_Type_article_attr%3Aroad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-underpronation?f=Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women",
     "LINK": "sports-shoe-finder-underpronation",
-    "FILTER": "Running_Type_article_attr%3Aroad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
+    "FILTER": "Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
     "Sentence": "These shoes come with well-ventilated soft soles and are lightweight to facilitate a smooth run. Also designed with enough cushioning and lot of flexibility to encourage foot motion of undepronators."
   },
   {
@@ -14,9 +14,9 @@ export default [
     "ANSWER Q1": "Running",
     "ANSWER Q2": "Road/Treadmill",
     "ANSWER Q3": "Normal arch/Neutral pronation",
-    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-neutralpronation?f=Running_Type_article_attr%3Aroad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
-    "LINK": "sports-shoe-finder-neutralpronation?f=Running_Type_article_attr%3Aroad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
-    "FILTER": "Running_Type_article_attr%3Aroad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-neutralpronation?f=Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women%2Cmen%2520women",
+    "LINK": "sports-shoe-finder-neutralpronation",
+    "FILTER": "Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
     "Sentence": "These shoes come with well-ventilated soft soles. They are also flexible and lightweight to facilitate a smooth run. They have modearte motion control feature and are stable to suit normal arched foot."
   },
   {
@@ -24,9 +24,9 @@ export default [
     "ANSWER Q1": "Running",
     "ANSWER Q2": "Road/Treadmill",
     "ANSWER Q3": "Low arch/Overpronation",
-    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-overpronation?f=Running_Type_article_attr%3Aroad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
-    "LINK": "sports-shoe-finder-overpronation?f=Running_Type_article_attr%3Aroad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
-    "FILTER": "Running_Type_article_attr%3Aroad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-overpronation?f=Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women%2Cmen%2520women%2Cmen%2520women",
+    "LINK": "sports-shoe-finder-overpronation",
+    "FILTER": "Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
     "Sentence": "These shoes come with well-ventilated soft soles. They are also flexible and lightweight to facilitate a smooth run. Motion control fetaures with firm midoles reduce the degree of pronation for low arched foot."
   },
   {
@@ -34,9 +34,9 @@ export default [
     "ANSWER Q1": "Running",
     "ANSWER Q2": "Road/Treadmill",
     "ANSWER Q3": "Skip",
-    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Running_Type_article_attr%3Aroad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
-    "FILTER": "Running_Type_article_attr%3Aroad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
+    "FILTER": "Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
     "Sentence": "These shoes come with well-ventilated soft soles. They are also flexible and lightweight to facilitate a smooth run."
   },
   {
@@ -104,9 +104,9 @@ export default [
     "ANSWER Q1": "Training",
     "ANSWER Q2": "Weight Training",
     "ANSWER Q3": "Skip",
-    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-men-training",
-    "LINK": "sports-shoe-finder-men-training",
-    "FILTER": "",
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Cushioning_article_attr%3Alow%2Cmedium%3A%3ASport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women",
+    "LINK": "sports-shoe-finder",
+    "FILTER": "Cushioning_article_attr%3Alow%2Cmedium%3A%3ASport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women",
     "Sentence": "These shoes have additional support on the sides for lateral and repeated movement of the legs for weight training activities. Can also be used for running on treadmill."
   },
   {
@@ -114,9 +114,9 @@ export default [
     "ANSWER Q1": "Training",
     "ANSWER Q2": "Cardio or Group Fitness",
     "ANSWER Q3": "Skip",
-    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women",
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
-    "FILTER": "Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women",
+    "FILTER": "Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women",
     "Sentence": "These shoes provide cushioning and shock absorption to compensate for pressure on the foot. Also have good medial - lateral (side to side) stability for injury free activities"
   },
   {
@@ -294,9 +294,9 @@ export default [
     "ANSWER Q1": "Cricket",
     "ANSWER Q2": "All Rounders",
     "ANSWER Q3": "Skip",
-    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Cleats_article_attr%3Aremoveable%3A%3ASport_article_attr%3Acricket%3A%3Agender%3Amen%2Cmen%2520women",
+    "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Cleats_article_attr%3Ano%2520cleats%2Cremoveable%3A%3ASport_article_attr%3Acricket",
     "LINK": "sports-shoe-finder",
-    "FILTER": "Cleats_article_attr%3Aremoveable%3A%3ASport_article_attr%3Acricket%3A%3Agender%3Amen%2Cmen%2520women",
+    "FILTER": "Cleats_article_attr%3Ano%2520cleats%2Cremoveable%3A%3ASport_article_attr%3Acricket",
     "Sentence": "These shoes have removable spikes which can be adjusted depending on the activity and field condition."
   },
   {

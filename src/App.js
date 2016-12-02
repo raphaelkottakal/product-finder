@@ -330,13 +330,15 @@ class App extends Component {
 				questionWrapper: {
 					position: 'relative',
 					padding: '0 42px',
-					backgroundColor: '#232323',
-					// background: 'radial-gradient(ellipse at center, rgba(138,138,138,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%)',
+					backgroundColor: '#0F0F0F',
+					background: 'url(http://assets.myntassets.com/v1480670509/SIS/shoe-finder/shape.png) no-repeat center center',
+					backgroundSize: 'cover',
 					borderBottomLeftRadius: 32,
 					borderBottomRightRadius: 32,
 					textAlign:'center',
 					fontFamily: 'Helvetica neue medium',
-					letterSpacing: 1
+					letterSpacing: 1,
+					boxShadow: '0px 10px 13px 0px rgba(0,0,0,1)'
 				},
 				question: {
 					margin: 0,
@@ -434,7 +436,7 @@ class App extends Component {
 
 			return (
 				<div key={i} style={css.wrapper}>
-					<div style={{backgroundColor: '#232323'}}>
+					<div style={{backgroundColor: '#0F0F0F'}}>
 						<p style={css.mainHead}>Sports Shoe Finder</p>
 						<img style={{marginTop:'-6px'}} src="http://res.cloudinary.com/myntra-com/image/upload/v1480571159/SIS/shoe-finder/dashed-line.png" alt="Men" />
 					</div>
@@ -451,14 +453,14 @@ class App extends Component {
 						{
 							(this.state.canSwipeBack) ?
 							<div onClick={this.moveBack.bind(this)} style={css.back}>
-								&#x025C2; 
+								<img src="http://assets.myntassets.com/v1480669828/SIS/shoe-finder/arrow.png" alt="back" />
 							</div>:
 							''
 						}
 						{
 							(this.state.canSwipeNext) ?
 							<div onClick={this.moveToNext.bind(this)} style={css.next}>
-								&#x025B8;
+								<img style={{transform: 'rotateY(180deg)'}} src="http://assets.myntassets.com/v1480669828/SIS/shoe-finder/arrow.png" alt="next" />
 							</div>:
 							''
 						}

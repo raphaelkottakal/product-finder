@@ -132,7 +132,7 @@ export default {
 				key: 'Hard/Indoor Ground',
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480333373/SIS/shoe-finder/28.2.png',
 				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480333373/SIS/shoe-finder/28.1.png',
-				optionText: 'Hard Ground',
+				optionText: 'Indoor',
 			},
 			{
 				key: 'Soft Ground (Clay)',
