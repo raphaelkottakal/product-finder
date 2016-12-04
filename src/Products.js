@@ -33,7 +33,7 @@ export default class App extends Component {
 			const imageSrc = 'http://assets.myntassets.com/h_240,q_80,w_180/v1/' + val['search_image'].slice(28);
 			return (
 				<div style={css.product} key={i} className="product">
-					<a onClick={this.handelClick.bind(this)} target="_blank" style={css.link} href={val['dre_landing_page_url']}>
+					<a onClick={this.handelClick.bind(this)} target="_blank" style={css.link} href={'/'+val['dre_landing_page_url']}>
 						<img src={imageSrc} alt={val['stylename']} />
 						<div style={css.details} className="details">
 							<div className="brand">{val['stylename']}</div>
