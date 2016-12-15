@@ -141,11 +141,19 @@ export default class App extends Component {
 				textTransform: 'uppercase',
 				color: '#fff',
 				fontWeight: 'bold'
+			},
+			resultText: {
+				backgroundColor: 'white',
+				color: 'black',
+				padding: 8,
+				fontSize: 14
 			}
 		}
+		// console.log(this.props.resultText);
 
 		return (
 			<div>
+				{(this.props.resultText) ? <div style={css.resultText}>{this.props.resultText}</div> : ''}
 				{(this.props.ajaxDone) ? <div style={css.title}>{this.props.title} <span style={css.styles}>{this.props.count} styles</span></div> : ''}
 				<div ref="products" style={wrapperCss}>
 					{(this.props.ajaxDone) ? this.renderProducts() : <div style={css.loading}>Fetching styles &hellip;</div>}

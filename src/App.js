@@ -29,7 +29,8 @@ class App extends Component {
 			resourcesLoaded: false,
 			imagesToLoad: 0,
 			imagesLoaded: 0,
-			shopLink: 'http://www.myntra.com/sports-shoe-finder?f=gender%3Amen%2Cmen%2520women'
+			shopLink: 'http://www.myntra.com/sports-shoe-finder?f=gender%3Amen%2Cmen%2520women',
+			resultText: ''
 
 		}
 	}
@@ -163,6 +164,7 @@ class App extends Component {
 		// console.log('result',resultObject);
 		this.getJson({ query: resultObject['LINK'], filter: resultObject['FILTER'] });
 		this.setState({shopLink: resultObject['CURATION - VIEW ALL']});
+		this.setState({resultText: resultObject['Sentence'] });
 	}
 
 	handelOptionClick(data) {
@@ -174,6 +176,8 @@ class App extends Component {
 		this.setState({
 			optionSelected: true
 		});
+
+		// console.log(this.state.optionSelected);
 
 
 		if (nextQuestionKey && !this.state.optionSelected) {
@@ -493,54 +497,64 @@ class App extends Component {
 	}
 
 	moveToNext() {
-		this.setState({canSwipeNext: false});
+		this.setState({
+			optionSelected: true,
+			canSwipeNext: false
+		});
 		// this.canSwipeNext = false;
-		TweenLite.to(this.refs.slider, 0.5, { x: "-="+window.innerWidth, onComplete: () => {
-			// console.log(this.state.currentQuestion+1,this.state.liveQuestions.length - 1);
-			if (this.state.currentQuestion+1 === 0) {
-				this.setState({canSwipeBack: false});
-				// this.canSwipeBack = false;
-			} else {
-				this.setState({canSwipeBack: true});
-				// this.canSwipeBack = true;
-			}
+		if (!this.state.optionSelected) {
+			TweenLite.to(this.refs.slider, 0.5, { x: "-="+window.innerWidth, onComplete: () => {
+				// console.log(this.state.currentQuestion+1,this.state.liveQuestions.length - 1);
+				if (this.state.currentQuestion+1 === 0) {
+					this.setState({canSwipeBack: false});
+					// this.canSwipeBack = false;
+				} else {
+					this.setState({canSwipeBack: true});
+					// this.canSwipeBack = true;
+				}
 
-			if (this.state.currentQuestion+1 === this.state.liveQuestions.length - 1) {
-				this.setState({canSwipeNext: false});
-				// this.canSwipeNext = false;
-			} else {
+				if (this.state.currentQuestion+1 === this.state.liveQuestions.length - 1) {
+					this.setState({canSwipeNext: false});
+					// this.canSwipeNext = false;
+				} else {
 
-				// this.canSwipeNext = true;
-				this.setState({canSwipeNext: true});
-			}
-			this.setState({currentQuestion: this.state.currentQuestion+1});
-		} });
+					// this.canSwipeNext = true;
+					this.setState({canSwipeNext: true});
+				}
+				this.setState({currentQuestion: this.state.currentQuestion+1, optionSelected: false});
+			} });
+		}
 	}
 
 	moveBack() {
-		this.setState({canSwipeBack: false});
+		this.setState({
+			optionSelected: true,
+			canSwipeBack: false
+		});
 		// this.canSwipeBack = false;
-		TweenLite.to(this.refs.slider, 0.5, { x: "+="+window.innerWidth, onComplete: () => {
-			if (this.state.currentQuestion-1 === 0) {
-				this.setState({canSwipeBack: false});
-				// this.canSwipeBack = false;
-			} else {
-				this.setState({canSwipeBack: true});
-				// this.canSwipeBack = true;
-			}
+		if (!this.state.optionSelected) {
+			TweenLite.to(this.refs.slider, 0.5, { x: "+="+window.innerWidth, onComplete: () => {
+				if (this.state.currentQuestion-1 === 0) {
+					this.setState({canSwipeBack: false});
+					// this.canSwipeBack = false;
+				} else {
+					this.setState({canSwipeBack: true});
+					// this.canSwipeBack = true;
+				}
 
-			if (this.state.currentQuestion-1 === this.state.liveQuestions.length - 1) {
-				this.setState({canSwipeNext: false});
+				if (this.state.currentQuestion-1 === this.state.liveQuestions.length - 1) {
+					this.setState({canSwipeNext: false});
 
-				// this.canSwipeNext = false;
-			} else {
+					// this.canSwipeNext = false;
+				} else {
 
-				this.setState({canSwipeNext: true});
-				// this.canSwipeNext = true;
-			}
+					this.setState({canSwipeNext: true});
+					// this.canSwipeNext = true;
+				}
 
-			this.setState({currentQuestion: this.state.currentQuestion-1});
-		} });
+				this.setState({currentQuestion: this.state.currentQuestion-1, optionSelected: false});
+			} });
+		}
 	}
 
 	handelTouchStartShop(e) {
@@ -641,7 +655,7 @@ class App extends Component {
 			{this.renderSlideDots()}
 			</div>
 			<Element name="shop">
-				<Products shopLink={this.state.shopLink} title="Men sports shoes" count={this.state.productsCount} ajaxDone={this.state.callDone} array={this.state.products} />
+				<Products resultText={this.state.resultText} shopLink={this.state.shopLink} title="Men sports shoes" count={this.state.productsCount} ajaxDone={this.state.callDone} array={this.state.products} />
 			</Element>
 				{/*(this.state.link) ? <a ref="shop" style={css.shopLink} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)} target="_blank" href={this.state.link}>{this.state.link}</a> : ''*/}
 			<div ref="loading" style={css.loading}>{this.getLoadedPercent()}% Loaded</div>
