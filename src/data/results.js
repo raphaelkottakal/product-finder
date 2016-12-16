@@ -7,7 +7,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-underpronation?f=Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women",
     "LINK": "sports-shoe-finder-underpronation",
     "FILTER": "Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes come with well-ventilated soft soles and are lightweight to facilitate a smooth run. Also designed with enough cushioning and lot of flexibility to encourage foot motion of undepronators."
+    "Sentence": "These shoes come with well-ventilated soft soles and are lightweight to facilitate a smooth run. Also designed with enough cushioning and lot of flexibility to encourage foot motion of undepronators.",
+    "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running-road.png"
   },
   {
     "COMBINATION NO.": "C2",
@@ -17,7 +18,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-neutralpronation?f=Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women%2Cmen%2520women",
     "LINK": "sports-shoe-finder-neutralpronation",
     "FILTER": "Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes come with well-ventilated soft soles. They are also flexible and lightweight to facilitate a smooth run. They have modearte motion control feature and are stable to suit normal arched foot."
+    "Sentence": "These shoes come with well-ventilated soft soles. They are also flexible and lightweight to facilitate a smooth run. They have modearte motion control feature and are stable to suit normal arched foot.",
+    "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running-road.png"
   },
   {
     "COMBINATION NO.": "C3",
@@ -27,7 +29,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-overpronation?f=Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women%2Cmen%2520women%2Cmen%2520women",
     "LINK": "sports-shoe-finder-overpronation",
     "FILTER": "Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes come with well-ventilated soft soles. They are also flexible and lightweight to facilitate a smooth run. Motion control fetaures with firm midoles reduce the degree of pronation for low arched foot."
+    "Sentence": "These shoes come with well-ventilated soft soles. They are also flexible and lightweight to facilitate a smooth run. Motion control fetaures with firm midoles reduce the degree of pronation for low arched foot.",
+    "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running-road.png"
   },
   {
     "COMBINATION NO.": "C4",
@@ -37,7 +40,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes come with well-ventilated soft soles. They are also flexible and lightweight to facilitate a smooth run."
+    "Sentence": "These shoes come with well-ventilated soft soles. They are also flexible and lightweight to facilitate a smooth run.",
+    "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running-road.png"
   },
   {
     "COMBINATION NO.": "C5",
@@ -47,7 +51,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Running_Type_article_attr%3Atrail%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Running_Type_article_attr%3Atrail%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes have rugged sole which provide great support, stability and traction to help you navigate through rough terrains."
+    "Sentence": "These shoes have rugged sole which provide great support, stability and traction to help you navigate through rough terrains.",
+    "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running-trail.png"
   },
   {
     "COMBINATION NO.": "C6",
@@ -57,7 +62,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Running_Type_article_attr%3Atrack%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Running_Type_article_attr%3Atrack%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes are lightweight with just enough cushioning, flexibility and stability to run on a track or any plain surface."
+    "Sentence": "These shoes are lightweight with just enough cushioning, flexibility and stability to run on a track or any plain surface.",
+    "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running-_track.png"
   },
   {
     "COMBINATION NO.": "C7",
@@ -67,7 +73,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-underpronation?f=gender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder-underpronation",
     "FILTER": "gender%3Amen%2Cmen%2520women",
-    "Sentence": "Under pronators roll outwards and doesnt have enough pronation for shock absorption. These shoes are hence designed with cushioning and lot of flexibility to encourage foot motion"
+    "Sentence": "Under pronators roll outwards and doesnt have enough pronation for shock absorption. These shoes are hence designed with cushioning and lot of flexibility to encourage foot motion",
+    "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running1.png"
   },
   {
     "COMBINATION NO.": "C8",
@@ -77,7 +84,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-neutralpronation?f=gender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder-neutralpronation",
     "FILTER": "gender%3Amen%2Cmen%2520women",
-    "Sentence": "Neutral pronators foot lands on the outside of the heel and rolls inwards slightly to absorb shock. The foot is biomechanically efficient and hence need stability shoes with moderate motion control features"
+    "Sentence": "Neutral pronators foot lands on the outside of the heel and rolls inwards slightly to absorb shock. The foot is biomechanically efficient and hence need stability shoes with moderate motion control features",
+    "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running1.png"
   },
   {
     "COMBINATION NO.": "C9",
@@ -87,7 +95,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-overpronation?f=gender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder-overpronation",
     "FILTER": "gender%3Amen%2Cmen%2520women",
-    "Sentence": "Over pronators land on the outside of the heel and roll inwards. Motion control shoes or high stability shoes with firm midsoles and control features that reduce the degree of pronation are best suited."
+    "Sentence": "Over pronators land on the outside of the heel and roll inwards. Motion control shoes or high stability shoes with firm midsoles and control features that reduce the degree of pronation are best suited.",
+    "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running1.png"
   },
   {
     "COMBINATION NO.": "C10",
@@ -97,7 +106,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Sport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These are lightweight shoes with mesh upper and maximum cushioning designed for regular to prolonged running. Thicker heels and flexible toe box help in one directional motion."
+    "Sentence": "These are lightweight shoes with mesh upper and maximum cushioning designed for regular to prolonged running. Thicker heels and flexible toe box help in one directional motion.",
+    "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running1.png"
   },
   {
     "COMBINATION NO.": "C11",
@@ -107,7 +117,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Cushioning_article_attr%3Alow%2Cmedium%3A%3ASport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Cushioning_article_attr%3Alow%2Cmedium%3A%3ASport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes have additional support on the sides for lateral and repeated movement of the legs for weight training activities. Can also be used for running on treadmill."
+    "Sentence": "These shoes have additional support on the sides for lateral and repeated movement of the legs for weight training activities. Can also be used for running on treadmill.",
+    "Image": "http://assets.myntassets.com/v1481884551/SIS/shoe-finder/training-weight.png"
   },
   {
     "COMBINATION NO.": "C12",
@@ -117,7 +128,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Sport_article_attr%3Atraining%2520%252F%2520gym%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes provide cushioning and shock absorption to compensate for pressure on the foot. Also have good medial - lateral (side to side) stability for injury free activities"
+    "Sentence": "These shoes provide cushioning and shock absorption to compensate for pressure on the foot. Also have good medial - lateral (side to side) stability for injury free activities",
+    "Image": "http://assets.myntassets.com/v1481884551/SIS/shoe-finder/training-cardio.png"
   },
   {
     "COMBINATION NO.": "C13",
@@ -127,7 +139,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-men-training",
     "LINK": "sports-shoe-finder-men-training",
     "FILTER": "",
-    "Sentence": "These shoes provide additional support on the sides for lateral and repeated movements of the legs. The lighter treads make them perfect for short walking and warm-up running as well."
+    "Sentence": "These shoes provide additional support on the sides for lateral and repeated movements of the legs. The lighter treads make them perfect for short walking and warm-up running as well.",
+    "Image": "http://assets.myntassets.com/v1481884551/SIS/shoe-finder/training1.png"
   },
   {
     "COMBINATION NO.": "C14",
@@ -137,7 +150,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Cleats_article_attr%3Afixed%3A%3ASport_article_attr%3Afootball%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Cleats_article_attr%3Afixed%3A%3ASport_article_attr%3Afootball%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women",
-    "Sentence": "These are most commonly used football shoes, built with cleats to provide traction on firm natural sufaces."
+    "Sentence": "These are most commonly used football shoes, built with cleats to provide traction on firm natural sufaces.",
+    "Image": "http://assets.myntassets.com/v1481884705/SIS/shoe-finder/football-grass.png"
   },
   {
     "COMBINATION NO.": "C15",
@@ -147,7 +161,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Cleats_article_attr%3Ano%2520cleats%3A%3ASport_article_attr%3Afootball%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Cleats_article_attr%3Ano%2520cleats%3A%3ASport_article_attr%3Afootball%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes have flat surface and are low-cut with slightly harder surface area and non-marking rubber sole."
+    "Sentence": "These shoes have flat surface and are low-cut with slightly harder surface area and non-marking rubber sole.",
+    "Image": "http://assets.myntassets.com/v1481884705/SIS/shoe-finder/football-indoor.png"
   },
   {
     "COMBINATION NO.": "C16",
@@ -157,7 +172,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Cleats_article_attr%3Aremoveable%3A%3ASport_article_attr%3Afootball%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Cleats_article_attr%3Aremoveable%3A%3ASport_article_attr%3Afootball%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes have removable cleats and their length can be adjusted depending on the condition of the field."
+    "Sentence": "These shoes have removable cleats and their length can be adjusted depending on the condition of the field.",
+    "Image": "http://assets.myntassets.com/v1481884706/SIS/shoe-finder/football-soft.png"
   },
   {
     "COMBINATION NO.": "C17",
@@ -167,7 +183,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Afootball%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Sport_article_attr%3Afootball%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes are designed to help you run, turn, pass and shoot! The cleats on the outstole allow for traction and movement on grass or turf."
+    "Sentence": "These shoes are designed to help you run, turn, pass and shoot! The cleats on the outstole allow for traction and movement on grass or turf.",
+    "Image": "http://assets.myntassets.com/v1481884704/SIS/shoe-finder/football1.png"
   },
   {
     "COMBINATION NO.": "C18",
@@ -177,7 +194,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-men-basketball-lowtops",
     "LINK": "sports-shoe-finder-men-basketball-lowtops",
     "FILTER": "",
-    "Sentence": "These are lightweight, low top shoes that aid in fast running and quick rebounds. They have minimal cushioning for enough stability without adding much weight."
+    "Sentence": "These are lightweight, low top shoes that aid in fast running and quick rebounds. They have minimal cushioning for enough stability without adding much weight.",
+    "Image": "http://assets.myntassets.com/v1481884920/SIS/shoe-finder/basketball_all.png"
   },
   {
     "COMBINATION NO.": "C19",
@@ -187,7 +205,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-men-basketball-lowtops",
     "LINK": "sports-shoe-finder-men-basketball-lowtops",
     "FILTER": "",
-    "Sentence": "These low cut shoes offer better and more stable ankle support. They are extra lightwieght and have less cushioning required for sharp shooting"
+    "Sentence": "These low cut shoes offer better and more stable ankle support. They are extra lightwieght and have less cushioning required for sharp shooting",
+    "Image": "http://assets.myntassets.com/v1481884920/SIS/shoe-finder/basketball_all.png"
   },
   {
     "COMBINATION NO.": "C20",
@@ -197,7 +216,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-men-basketball-midandhightops",
     "LINK": "sports-shoe-finder-men-basketball-midandhightops",
     "FILTER": "",
-    "Sentence": "These shoes give lots of ankle support and shock absorption during rebounds and high jumps"
+    "Sentence": "These shoes give lots of ankle support and shock absorption during rebounds and high jumps",
+    "Image": "http://assets.myntassets.com/v1481884920/SIS/shoe-finder/basketball_all.png"
   },
   {
     "COMBINATION NO.": "C21",
@@ -207,7 +227,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-men-basketball-midandhightops",
     "LINK": "sports-shoe-finder-men-basketball-midandhightops",
     "FILTER": "",
-    "Sentence": "These are heavyweight shoes with maximum cushioning and stabilityto aid jumping in confined spaces. High tops or mid tops work well."
+    "Sentence": "These are heavyweight shoes with maximum cushioning and stabilityto aid jumping in confined spaces. High tops or mid tops work well.",
+    "Image": "http://assets.myntassets.com/v1481884920/SIS/shoe-finder/basketball_all.png"
   },
   {
     "COMBINATION NO.": "C22",
@@ -217,7 +238,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Abasketball%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Sport_article_attr%3Abasketball%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "The shoes for this postion depends on playing style. Choose low cut, light and flexible models vs high-top, heavier and durable ones if you play down low."
+    "Sentence": "The shoes for this postion depends on playing style. Choose low cut, light and flexible models vs high-top, heavier and durable ones if you play down low.",
+    "Image": "http://assets.myntassets.com/v1481884920/SIS/shoe-finder/basketball_all.png"
   },
   {
     "COMBINATION NO.": "C23",
@@ -227,7 +249,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Abasketball%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Sport_article_attr%3Abasketball%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These mid or high top shoes provide ankle support to ease the effect of lateral moves, abrupt starts, stops and jumps. The soles provide maximum shock absorption and moderate flexibility."
+    "Sentence": "These mid or high top shoes provide ankle support to ease the effect of lateral moves, abrupt starts, stops and jumps. The soles provide maximum shock absorption and moderate flexibility.",
+    "Image": "http://assets.myntassets.com/v1481884920/SIS/shoe-finder/basketball_all.png"
   },
   {
     "COMBINATION NO.": "C24",
@@ -237,7 +260,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Outsole_Type_article_attr%3Amarking%3A%3ASport_article_attr%3Atennis%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Outsole_Type_article_attr%3Amarking%3A%3ASport_article_attr%3Atennis%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes have non-marking and flatter outsoles that prevent any damge to the court. They also have high traction for better grip on these natural surfaces"
+    "Sentence": "These shoes have non-marking and flatter outsoles that prevent any damge to the court. They also have high traction for better grip on these natural surfaces",
+    "Image": "http://assets.myntassets.com/v1481884967/SIS/shoe-finder/tennis_all_except_indoor.png"
   },
   {
     "COMBINATION NO.": "C25",
@@ -247,7 +271,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Outsole_Type_article_attr%3Amarking%3A%3ASport_article_attr%3Atennis%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Outsole_Type_article_attr%3Amarking%3A%3ASport_article_attr%3Atennis%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes have non-marking and flatter outsoles that prevent any damge to the court. They also have high traction for better grip on these natural surfaces"
+    "Sentence": "These shoes have non-marking and flatter outsoles that prevent any damge to the court. They also have high traction for better grip on these natural surfaces",
+    "Image": "http://assets.myntassets.com/v1481884967/SIS/shoe-finder/tennis_all_except_indoor.png"
   },
   {
     "COMBINATION NO.": "C26",
@@ -257,7 +282,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Outsole_Type_article_attr%3Anon-marking%3A%3ASport_article_attr%3Atennis%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Outsole_Type_article_attr%3Anon-marking%3A%3ASport_article_attr%3Atennis%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes provide high shock absorption and cushioning required for hard courts. The tough upper gives comfort and supports needed to move around the court."
+    "Sentence": "These shoes provide high shock absorption and cushioning required for hard courts. The tough upper gives comfort and supports needed to move around the court.",
+    "Image": "http://assets.myntassets.com/v1481884967/SIS/shoe-finder/tennis-indoor.png"
   },
   {
     "COMBINATION NO.": "C27",
@@ -267,7 +293,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atennis%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Sport_article_attr%3Atennis%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes come with mid-foot support and flexibility for lateral and multi-directional movements. The grip varies depending on the type of surface to provide the right traction."
+    "Sentence": "These shoes come with mid-foot support and flexibility for lateral and multi-directional movements. The grip varies depending on the type of surface to provide the right traction.",
+    "Image": "http://assets.myntassets.com/v1481884967/SIS/shoe-finder/tennis_all_except_indoor.png"
   },
   {
     "COMBINATION NO.": "C28",
@@ -277,7 +304,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Cleats_article_attr%3Ano%2520cleats%3A%3ASport_article_attr%3Acricket%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Cleats_article_attr%3Ano%2520cleats%3A%3ASport_article_attr%3Acricket%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes have spikes on the sole which offer good support and shock absorption."
+    "Sentence": "These shoes have spikes on the sole which offer good support and shock absorption.",
+    "Image": "http://assets.myntassets.com/v1481885234/SIS/shoe-finder/cricket_all.png"
   },
   {
     "COMBINATION NO.": "C29",
@@ -287,7 +315,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Cleats_article_attr%3Afixed%3A%3ASport_article_attr%3Acricket%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Cleats_article_attr%3Afixed%3A%3ASport_article_attr%3Acricket%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes have flat soles to move fast and effortlessly. These are also lightweight with added toe protection."
+    "Sentence": "These shoes have flat soles to move fast and effortlessly. These are also lightweight with added toe protection.",
+    "Image": "http://assets.myntassets.com/v1481885234/SIS/shoe-finder/cricket_all.png"
   },
   {
     "COMBINATION NO.": "C30",
@@ -297,7 +326,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Cleats_article_attr%3Ano%2520cleats%2Cremoveable%3A%3ASport_article_attr%3Acricket",
     "LINK": "sports-shoe-finder",
     "FILTER": "Cleats_article_attr%3Ano%2520cleats%2Cremoveable%3A%3ASport_article_attr%3Acricket",
-    "Sentence": "These shoes have removable spikes which can be adjusted depending on the activity and field condition."
+    "Sentence": "These shoes have removable spikes which can be adjusted depending on the activity and field condition.",
+    "Image": "http://assets.myntassets.com/v1481885234/SIS/shoe-finder/cricket_all.png"
   },
   {
     "COMBINATION NO.": "C31",
@@ -307,7 +337,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Acricket%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Sport_article_attr%3Acricket%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes are designed for better grip, shock absorption, ankle support and toe protection depending on player type"
+    "Sentence": "These shoes are designed for better grip, shock absorption, ankle support and toe protection depending on player type",
+    "Image": "http://assets.myntassets.com/v1481885234/SIS/shoe-finder/cricket_all.png"
   },
   {
     "COMBINATION NO.": "C32",
@@ -317,7 +348,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Running_Type_article_attr%3Atrail%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Running_Type_article_attr%3Atrail%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes have rugged sole which provide great support, stability and traction to help you navigate through rough terrains."
+    "Sentence": "These shoes have rugged sole which provide great support, stability and traction to help you navigate through rough terrains.",
+    "Image": "http://assets.myntassets.com/v1481885382/SIS/shoe-finder/outdoor-trail.png"
   },
   {
     "COMBINATION NO.": "C33",
@@ -327,7 +359,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-men-hiking-midtops",
     "LINK": "sports-shoe-finder-men-hiking-midtops",
     "FILTER": "",
-    "Sentence": "These mid-top sturdy shoes are designed for hiking on various trails - mud, grass, stone. They have ruuber soles and toe caps for durability and made of few seams for water and abrasion resistance"
+    "Sentence": "These mid-top sturdy shoes are designed for hiking on various trails - mud, grass, stone. They have ruuber soles and toe caps for durability and made of few seams for water and abrasion resistance",
+    "Image": "http://assets.myntassets.com/v1481885381/SIS/shoe-finder/outdoorall.png"
   },
   {
     "COMBINATION NO.": "C34",
@@ -337,7 +370,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-men-hiking-hightops",
     "LINK": "sports-shoe-finder-men-hiking-hightops",
     "FILTER": "",
-    "Sentence": "These high-top sturdy shoes are designed for hiking on various trails - mud, grass, stone. They have ruuber soles and toe caps for durability and made of few seams for water and abrasion resistance"
+    "Sentence": "These high-top sturdy shoes are designed for hiking on various trails - mud, grass, stone. They have ruuber soles and toe caps for durability and made of few seams for water and abrasion resistance",
+    "Image": "http://assets.myntassets.com/v1481885381/SIS/shoe-finder/outdoorall.png"
   },
   {
     "COMBINATION NO.": "C35",
@@ -347,7 +381,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Atrekking%2520%252F%2520hiking%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Sport_article_attr%3Atrekking%2520%252F%2520hiking%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These mid-high top sturdy shoes are designed for hiking on various trails - mud, grass, stone. They have ruuber soles and toe caps for durability and made of few seams for water and abrasion resistance"
+    "Sentence": "These mid-high top sturdy shoes are designed for hiking on various trails - mud, grass, stone. They have ruuber soles and toe caps for durability and made of few seams for water and abrasion resistance",
+    "Image": "http://assets.myntassets.com/v1481885381/SIS/shoe-finder/outdoorall.png"
   },
   {
     "COMBINATION NO.": "C36",
@@ -357,7 +392,8 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-men-trekking",
     "LINK": "sports-shoe-finder-men-trekking",
     "FILTER": "",
-    "Sentence": "These shoes are designed to protect feet and ankles during heavy outdoor activities. The cushioning and durability of these shoes depends on the terrain and adventure level."
+    "Sentence": "These shoes are designed to protect feet and ankles during heavy outdoor activities. The cushioning and durability of these shoes depends on the terrain and adventure level.",
+    "Image": "http://assets.myntassets.com/v1481885381/SIS/shoe-finder/outdoorall.png"
   },
   {
     "COMBINATION NO.": "C37",
@@ -367,6 +403,7 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Sport_article_attr%3Abadminton%2Ctennis%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Sport_article_attr%3Abadminton%2Ctennis%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes have rubber outer soles for better grip on indoor courts. The soles are non-marking to prevent any marks on floor"
+    "Sentence": "These shoes have rubber outer soles for better grip on indoor courts. The soles are non-marking to prevent any marks on floor",
+    "Image": "http://assets.myntassets.com/v1481885543/SIS/shoe-finder/indoor1.png"
   }
 ]

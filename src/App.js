@@ -30,7 +30,8 @@ class App extends Component {
 			imagesToLoad: 0,
 			imagesLoaded: 0,
 			shopLink: 'http://www.myntra.com/sports-shoe-finder?f=gender%3Amen%2Cmen%2520women',
-			resultText: ''
+			resultText: '',
+			resultImage: ''
 
 		}
 	}
@@ -110,7 +111,7 @@ class App extends Component {
 				scroller.scrollTo('shop',{
 					duration: 1000,
 					delay: 100,
-					offset: -50,
+					// offset: -50,
 					smooth: true,
 				});
 			}
@@ -165,6 +166,7 @@ class App extends Component {
 		this.getJson({ query: resultObject['LINK'], filter: resultObject['FILTER'] });
 		this.setState({shopLink: resultObject['CURATION - VIEW ALL']});
 		this.setState({resultText: resultObject['Sentence'] });
+		this.setState({resultImage: resultObject['Image'] });
 	}
 
 	handelOptionClick(data) {
@@ -641,6 +643,22 @@ class App extends Component {
   			justifyContent: 'center',
   			alignItems: 'center',
   			fontSize: 18
+  		},
+  		resultWrapper: {
+  			padding: '0 32px'
+  		},
+  		resultImage: {
+  			width: '40%',
+  			height: 'auto',
+  			display: 'inline-block',
+  			verticalAlign: 'middle'
+  		},
+  		resultText: {
+  			width: '60%',
+  			height: 'auto',
+  			display: 'inline-block',
+  			verticalAlign: 'middle',
+  			textAlign: 'center'
   		}
   	}
 
@@ -651,11 +669,20 @@ class App extends Component {
 				
 				{this.renderQuestions()}
 			</div>
+			
+			<Element name="shop">
+			{(this.state.resultImage && this.state.resultText)?
+				<div style={css.resultWrapper}>
+					<img style={css.resultImage} src={this.state.resultImage} alt="result shoe" />
+					<div style={css.resultText}>
+						{this.state.resultText}
+					</div>
+				</div>
+				:''}
 			<div style={{textAlign: 'center'}}>
 			{this.renderSlideDots()}
 			</div>
-			<Element name="shop">
-				<Products resultText={this.state.resultText} shopLink={this.state.shopLink} title="Men sports shoes" count={this.state.productsCount} ajaxDone={this.state.callDone} array={this.state.products} />
+				<Products shopLink={this.state.shopLink} title="Men sports shoes" count={this.state.productsCount} ajaxDone={this.state.callDone} array={this.state.products} />
 			</Element>
 				{/*(this.state.link) ? <a ref="shop" style={css.shopLink} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)} target="_blank" href={this.state.link}>{this.state.link}</a> : ''*/}
 			<div ref="loading" style={css.loading}>{this.getLoadedPercent()}% Loaded</div>

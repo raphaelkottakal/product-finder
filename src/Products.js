@@ -14,17 +14,31 @@ export default class App extends Component {
 
 		const css = {
 			product: {
-				width: '33.3%',
+				width: '50%',
 				backgroundColor: '#EDEDEF',
 				color: '#575759',
-				padding: '0 1px'
+				padding: 1
 			},
 			link: {
 				color: 'black',
 				textDecoration: 'none'
 			},
 			details: {
-				padding: 4
+				padding: 4,
+				backgroundColor: 'white'
+			},
+			brand: {
+				paddingBottom: 2
+			},
+			newPrice: {
+				fontSize: 13
+			},
+			origPrice: {
+				textDecoration: 'line-through',
+				color: '#717171'
+			},
+			discountPercent: {
+				color: 'red'
 			}
 		}
 
@@ -36,11 +50,15 @@ export default class App extends Component {
 					<a onClick={this.handelClick.bind(this)} target="_blank" style={css.link} href={'/'+val['dre_landing_page_url']}>
 						<img src={imageSrc} alt={val['stylename']} />
 						<div style={css.details} className="details">
-							<div className="brand">{val['stylename']}</div>
+							<div className="brand" style={css.brand}>{val['brands_filter_facet']}</div>
 							<div className="price-container">
 								{/*<span className="mrp">{val['price']}</span>*/}
-								<span className="discounted"><strong>Rs.{val['discounted_price']}</strong></span>
-								{(val['dre_discount_label'])?<span className="discount">, {val['dre_discount_label']}</span>:''}
+								<span style={css.newPrice} className="discounted"><strong>&#x20b9;{val['discounted_price']}</strong></span>
+								{(val['dre_discount_label'])?<span style={css.origPrice}>&nbsp;&#x20b9;{val['price']}</span>:''}
+								{(val['dre_discount_label'])?<span style={css.discountPercent} className="discount"> {val['dre_discount_label'].slice(1,-1)}</span>:''}
+							</div>
+							<div>
+								{(val['product_additional_info'].length>=22)?val['product_additional_info'].slice(0,21)+'...':val['product_additional_info']}
 							</div>
 						</div>
 					</a>
@@ -153,7 +171,6 @@ export default class App extends Component {
 
 		return (
 			<div>
-				{(this.props.resultText) ? <div style={css.resultText}>{this.props.resultText}</div> : ''}
 				{(this.props.ajaxDone) ? <div style={css.title}>{this.props.title} <span style={css.styles}>{this.props.count} styles</span></div> : ''}
 				<div ref="products" style={wrapperCss}>
 					{(this.props.ajaxDone) ? this.renderProducts() : <div style={css.loading}>Fetching styles &hellip;</div>}
