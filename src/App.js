@@ -30,6 +30,7 @@ class App extends Component {
 			imagesToLoad: 0,
 			imagesLoaded: 0,
 			shopLink: 'http://www.myntra.com/sports-shoe-finder?f=gender%3Amen%2Cmen%2520women',
+			resutl: {},
 			resultText: '',
 			resultImage: ''
 
@@ -108,12 +109,17 @@ class App extends Component {
 			});
 
 			if (this.state.choices.length === this.state.liveQuestions.length) {
+				this.setState({resultText: this.state.result['Sentence'] });
+				this.setState({resultImage: this.state.result['Image'] });
 				scroller.scrollTo('shop',{
 					duration: 1000,
 					delay: 100,
 					// offset: -50,
 					smooth: true,
 				});
+			} else {
+				this.setState({resultText: '' });
+				this.setState({resultImage: '' });
 			}
 			// console.log(res);
 			// console.log('Product count',res.data.data.results.totalProductsCount);
@@ -138,8 +144,8 @@ class App extends Component {
 
 		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] ) {
 			// console.log(2);
-			
-			resultObject = find(results,(o) => { 
+
+			resultObject = find(results,(o) => {
 				return (
 					o['ANSWER Q1'] === answers['ANSWER Q1'] &&
 					o['ANSWER Q2'] === answers['ANSWER Q2'] &&
@@ -150,8 +156,8 @@ class App extends Component {
 
 		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] && answers['ANSWER Q3'] ) {
 			// console.log(3);
-			
-			resultObject = find(results,(o) => { 
+
+			resultObject = find(results,(o) => {
 				return (
 					o['ANSWER Q1'] === answers['ANSWER Q1'] &&
 					o['ANSWER Q2'] === answers['ANSWER Q2'] &&
@@ -162,11 +168,11 @@ class App extends Component {
 		if (resultObject) {
 
 		}
-		// console.log('result',resultObject);
+		console.log('answers',answers);
+		console.log('result',resultObject);
 		this.getJson({ query: resultObject['LINK'], filter: resultObject['FILTER'] });
 		this.setState({shopLink: resultObject['CURATION - VIEW ALL']});
-		this.setState({resultText: resultObject['Sentence'] });
-		this.setState({resultImage: resultObject['Image'] });
+		this.setState({result: resultObject});
 	}
 
 	handelOptionClick(data) {
@@ -183,7 +189,7 @@ class App extends Component {
 
 
 		if (nextQuestionKey && !this.state.optionSelected) {
-			
+
 			// console.log(questions[nextQuestionKey]);
 			window.scrollTo(0, 0);
 			TweenLite.to(this.refs.slider, 0.5, { x: "-="+window.innerWidth, onComplete: () => {
@@ -201,7 +207,7 @@ class App extends Component {
 					// this.setState({canSwipeNext: true});
 
 				}
-				
+
 				// console.log('is not last', this.state.currentQuestion !== this.state.liveQuestions.length - 1);
 				// console.log('next  question', this.state.currentQuestion);
 				// console.log('last question',this.state.liveQuestions.length - 1);
@@ -319,8 +325,8 @@ class App extends Component {
 
 	renderQuestions() {
 		const windowWidth = window.innerWidth;
-			
-		
+
+
 		const allQuestion = this.state.liveQuestions.map((val,i) => {
 			// console.log(val.options.length);
 			const { text, options, key } = val;
@@ -567,7 +573,7 @@ class App extends Component {
 	handelTouchMoveShop(e) {
 		// if (!this.canScrollShop) {
 		// 	e.preventDefault();
-			
+
 		// }
 		// const { clientY } = e.nativeEvent.touches[0];
 		// const diff = Math.floor((this.startTouchYShop - clientY));
@@ -665,11 +671,11 @@ class App extends Component {
 	return (
 		<div style={css.app} className="App">
 			<div onTouchStart={this.handelTouchStart.bind(this)} onTouchMove={this.handelTouchMove.bind(this)} style={css.slider} ref="slider">
-				
-				
+
+
 				{this.renderQuestions()}
 			</div>
-			
+
 			<Element name="shop">
 			{(this.state.resultImage && this.state.resultText)?
 				<div style={css.resultWrapper}>

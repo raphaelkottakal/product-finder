@@ -55,8 +55,8 @@ export default {
 			},
 			{
 				key: 'Indoor Sports',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1482146869/SIS/shoe-finder/indoor.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1482145439/SIS/shoe-finder/indoor2.png',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1482151060/SIS/shoe-finder/indoor-01.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1482151063/SIS/shoe-finder/indoor-02.png',
 				optionText: 'Indoor',
 			},
 		]
@@ -259,7 +259,6 @@ export default {
 				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480336051/SIS/shoe-finder/21.png',
 				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480336051/SIS/shoe-finder/21.1.png',
 				optionText: 'Trail Running',
-				nextQuestionKey: 'pronation'
 			},
 			{
 				key: 'Hiking/Trekking',
