@@ -168,8 +168,8 @@ class App extends Component {
 		if (resultObject) {
 
 		}
-		console.log('answers',answers);
-		console.log('result',resultObject);
+		// console.log('answers',answers);
+		// console.log('result',resultObject);
 		this.getJson({ query: resultObject['LINK'], filter: resultObject['FILTER'] });
 		this.setState({shopLink: resultObject['CURATION - VIEW ALL']});
 		this.setState({result: resultObject});
