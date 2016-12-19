@@ -29,8 +29,9 @@ class App extends Component {
 			resourcesLoaded: false,
 			imagesToLoad: 0,
 			imagesLoaded: 0,
-			shopLink: 'http://www.myntra.com/sports-shoe-finder?f=gender%3Amen%2520women%2Cwomen'
-
+			shopLink: 'http://www.myntra.com/sports-shoe-finder?f=gender%3Amen%2520women%2Cwomen',
+			resultText: '',
+			resultImage: ''
 		}
 	}
 
@@ -134,8 +135,8 @@ class App extends Component {
 
 		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] ) {
 			// console.log(2);
-			
-			resultObject = find(results,(o) => { 
+
+			resultObject = find(results,(o) => {
 				return (
 					o['ANSWER Q1'] === answers['ANSWER Q1'] &&
 					o['ANSWER Q2'] === answers['ANSWER Q2'] &&
@@ -146,8 +147,8 @@ class App extends Component {
 
 		if (answers['ANSWER Q1'] && answers['ANSWER Q2'] && answers['ANSWER Q3'] ) {
 			// console.log(3);
-			
-			resultObject = find(results,(o) => { 
+
+			resultObject = find(results,(o) => {
 				return (
 					o['ANSWER Q1'] === answers['ANSWER Q1'] &&
 					o['ANSWER Q2'] === answers['ANSWER Q2'] &&
@@ -162,6 +163,8 @@ class App extends Component {
 		// console.log('result',resultObject);
 		this.getJson({ query: resultObject['LINK'], filter: resultObject['FILTER'] });
 		this.setState({shopLink: resultObject['CURATION - VIEW ALL']});
+		this.setState({resultText: resultObject['Sentence'] });
+		this.setState({resultImage: resultObject['Image'] });
 	}
 
 	handelOptionClick(data) {
@@ -176,7 +179,7 @@ class App extends Component {
 
 
 		if (nextQuestionKey && !this.state.optionSelected) {
-			
+
 			// console.log(questions[nextQuestionKey]);
 			window.scrollTo(0, 0);
 			TweenLite.to(this.refs.slider, 0.5, { x: "-="+window.innerWidth, onComplete: () => {
@@ -194,7 +197,7 @@ class App extends Component {
 					// this.setState({canSwipeNext: true});
 
 				}
-				
+
 				// console.log('is not last', this.state.currentQuestion !== this.state.liveQuestions.length - 1);
 				// console.log('next  question', this.state.currentQuestion);
 				// console.log('last question',this.state.liveQuestions.length - 1);
@@ -312,8 +315,8 @@ class App extends Component {
 
 	renderQuestions() {
 		const windowWidth = window.innerWidth;
-			
-		
+
+
 		const allQuestion = this.state.liveQuestions.map((val,i) => {
 			// console.log(val.options.length);
 			const { text, options, key } = val;
@@ -452,7 +455,7 @@ class App extends Component {
 						{
 							(this.state.canSwipeBack) ?
 							<div onClick={this.moveBack.bind(this)} style={css.back}>
-								<img src="http://assets.myntassets.com/v1480669828/SIS/shoe-finder/arrow.png" alt="back" /> 
+								<img src="http://assets.myntassets.com/v1480669828/SIS/shoe-finder/arrow.png" alt="back" />
 							</div>:
 							''
 						}
@@ -550,7 +553,7 @@ class App extends Component {
 	handelTouchMoveShop(e) {
 		// if (!this.canScrollShop) {
 		// 	e.preventDefault();
-			
+
 		// }
 		// const { clientY } = e.nativeEvent.touches[0];
 		// const diff = Math.floor((this.startTouchYShop - clientY));
@@ -626,21 +629,46 @@ class App extends Component {
   			justifyContent: 'center',
   			alignItems: 'center',
   			fontSize: 18
+  		},
+			resultWrapper: {
+  			padding: '0 32px'
+  		},
+  		resultImage: {
+  			width: '40%',
+  			height: 'auto',
+  			display: 'inline-block',
+  			verticalAlign: 'middle'
+  		},
+  		resultText: {
+  			width: '60%',
+  			height: 'auto',
+  			display: 'inline-block',
+  			verticalAlign: 'middle',
+  			textAlign: 'center'
   		}
   	}
 
 	return (
 		<div style={css.app} className="App">
 			<div onTouchStart={this.handelTouchStart.bind(this)} onTouchMove={this.handelTouchMove.bind(this)} style={css.slider} ref="slider">
-				
-				
+
+
 				{this.renderQuestions()}
 			</div>
+
+			<Element name="shop">
+			{(this.state.resultImage && this.state.resultText)?
+				<div style={css.resultWrapper}>
+					<img style={css.resultImage} src={this.state.resultImage} alt="result shoe" />
+					<div style={css.resultText}>
+						{this.state.resultText}
+					</div>
+				</div>
+				:''}
 			<div style={{textAlign: 'center'}}>
 			{this.renderSlideDots()}
 			</div>
-			<Element name="shop">
-				<Products shopLink={this.state.shopLink} title="Women sports shoes" count={this.state.productsCount} ajaxDone={this.state.callDone} array={this.state.products} />
+				<Products shopLink={this.state.shopLink} title="Men sports shoes" count={this.state.productsCount} ajaxDone={this.state.callDone} array={this.state.products} />
 			</Element>
 				{/*(this.state.link) ? <a ref="shop" style={css.shopLink} onTouchStart={this.handelTouchStartShop.bind(this)} onTouchMove={this.handelTouchMoveShop.bind(this)} target="_blank" href={this.state.link}>{this.state.link}</a> : ''*/}
 			<div ref="loading" style={css.loading}>{this.getLoadedPercent()}% Loaded</div>
