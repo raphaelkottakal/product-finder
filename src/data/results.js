@@ -18,7 +18,7 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-neutralpronation?f=Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women%2Cmen%2520women%2Cmen%2520women",
     "LINK": "sports-shoe-finder-neutralpronation",
     "FILTER": "Running_Type_article_attr%3Along%2520distance%2Croad%2520running%3A%3ASport_article_attr%3Arunning%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes come with well-ventilated soft soles. They are also flexible and lightweight to facilitate a smooth run. They have modearte motion control feature and are stable to suit normal arched foot.",
+    "Sentence": "These shoes come with well-ventilated soft soles. They are also flexible and lightweight to facilitate a smooth run. They have moderate motion control feature and are stable to suit normal arched foot.",
     "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running-road.png"
   },
   {
@@ -95,7 +95,7 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder-overpronation?f=gender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder-overpronation",
     "FILTER": "gender%3Amen%2Cmen%2520women",
-    "Sentence": "Over pronators land on the outside of the heel and roll inwards. Motion control shoes or high stability shoes with firm midsoles and control features that reduce the degree of pronation are best suited.",
+    "Sentence": "Over pronators land on the outside of the heel and roll inwards. Motion control shoes or high stability shoes with firm mid-soles and control features that reduce the degree of pronation are best suited.",
     "Image": "http://assets.myntassets.com/v1481883914/SIS/shoe-finder/running1.png"
   },
   {
@@ -282,7 +282,7 @@ export default [
     "CURATION - VIEW ALL": "http://www.myntra.com/sports-shoe-finder?f=Outsole_Type_article_attr%3Anon-marking%3A%3ASport_article_attr%3Atennis%3A%3Agender%3Amen%2Cmen%2520women",
     "LINK": "sports-shoe-finder",
     "FILTER": "Outsole_Type_article_attr%3Anon-marking%3A%3ASport_article_attr%3Atennis%3A%3Agender%3Amen%2Cmen%2520women",
-    "Sentence": "These shoes provide high shock absorption and cushioning required for hard courts. The tough upper gives comfort and supports needed to move around the court.",
+    "Sentence": "These shoes provide high shock absorption and cushioning required for hard courts. The tough upper gives comfort and support needed to move around the court.",
     "Image": "http://assets.myntassets.com/v1481884967/SIS/shoe-finder/tennis-indoor.png"
   },
   {
