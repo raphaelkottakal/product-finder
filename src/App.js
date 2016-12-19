@@ -30,6 +30,7 @@ class App extends Component {
 			imagesToLoad: 0,
 			imagesLoaded: 0,
 			shopLink: 'http://www.myntra.com/sports-shoe-finder?f=gender%3Amen%2520women%2Cwomen',
+			result: {},
 			resultText: '',
 			resultImage: ''
 		}
@@ -106,12 +107,17 @@ class App extends Component {
 			  label : `Query:${query}, filter:${filter}`
 			});
 			if (this.state.choices.length === this.state.liveQuestions.length) {
+				this.setState({resultText: this.state.result['Sentence'] });
+				this.setState({resultImage: this.state.result['Image'] });
 				scroller.scrollTo('shop',{
 					duration: 1000,
 					delay: 100,
 					offset: -50,
 					smooth: true,
 				});
+			} else {
+				this.setState({resultText: '' });
+				this.setState({resultImage: '' });
 			}
 			// console.log(res);
 			// console.log('Product count',res.data.data.results.totalProductsCount);
@@ -163,8 +169,7 @@ class App extends Component {
 		// console.log('result',resultObject);
 		this.getJson({ query: resultObject['LINK'], filter: resultObject['FILTER'] });
 		this.setState({shopLink: resultObject['CURATION - VIEW ALL']});
-		this.setState({resultText: resultObject['Sentence'] });
-		this.setState({resultImage: resultObject['Image'] });
+		this.setState({result: resultObject });
 	}
 
 	handelOptionClick(data) {
