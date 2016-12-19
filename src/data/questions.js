@@ -13,8 +13,8 @@ export default {
 			},
 			{
 				key: 'Training',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/2.1.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/2.png',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1482146869/SIS/shoe-finder/training.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1482145439/SIS/shoe-finder/training2.png',
 				optionText: 'Training',
 				nextQuestionKey: 'oneB'
 			},
@@ -41,8 +41,8 @@ export default {
 			},
 			{
 				key: 'Cricket',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/5.1.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/5.png',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1482146869/SIS/shoe-finder/cricket.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1482145439/SIS/shoe-finder/cricket2.png',
 				optionText: 'Cricket',
 				nextQuestionKey: 'oneF'
 			},
@@ -55,8 +55,8 @@ export default {
 			},
 			{
 				key: 'Indoor Sports',
-				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/8.1.png',
-				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1480332709/SIS/shoe-finder/8.png',
+				image: 'http://res.cloudinary.com/myntra-com/image/upload/v1482146869/SIS/shoe-finder/indoor.png',
+				select: 'http://res.cloudinary.com/myntra-com/image/upload/v1482145439/SIS/shoe-finder/indoor2.png',
 				optionText: 'Indoor',
 			},
 		]
