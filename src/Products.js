@@ -54,7 +54,7 @@ export default class App extends Component {
 							<div className="price-container">
 								{/*<span className="mrp">{val['price']}</span>*/}
 								<span style={css.newPrice} className="discounted"><strong>&#x20b9;{val['discounted_price']}</strong></span>
-								{(val['dre_discount_label'])?<span style={css.origPrice}>&nbsp;&#x20b9;{val['price']}</span>:''}
+								{(val['dre_discount_label'])?<span>&nbsp;<span style={css.origPrice}>&#x20b9;{val['price']}</span></span>:''}
 								{(val['dre_discount_label'])?<span style={css.discountPercent} className="discount"> {val['dre_discount_label'].slice(1,-1)}</span>:''}
 							</div>
 							<div>
