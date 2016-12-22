@@ -112,7 +112,6 @@ class App extends Component {
 				scroller.scrollTo('shop',{
 					duration: 1000,
 					delay: 100,
-					offset: -50,
 					smooth: true,
 				});
 			} else {
